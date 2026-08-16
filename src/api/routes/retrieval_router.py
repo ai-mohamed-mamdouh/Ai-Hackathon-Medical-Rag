@@ -23,13 +23,15 @@ class RetrieveResponse(BaseModel):
 def retrieve(
     query: Query,
     request: Request,
+    decomposition:bool,
 ) -> RetrieveResponse:
     
     reriever = Retriever(request.app.state.vector_store)
 
     documents = reriever.retrieval_pipeline(
         query=query,
-        reRanker_model=request.app.state.reRanker_model
+        reranker_model=request.app.state.reRanker_model,
+        decomposition=decomposition
         )
 
     return RetrieveResponse(documents=documents)
