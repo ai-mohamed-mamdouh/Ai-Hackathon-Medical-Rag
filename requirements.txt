@@ -1,0 +1,17 @@
+langchain
+langchain-community
+langchain-huggingface 
+langchain-chroma
+langchain-groq
+langchain-text-splitters
+langchain-pymupdf4llm
+langchain-docling 
+sentence-transformers
+fastapi
+python-multipart
+pymupdf4llm
+unstructured
+rank_bm25
+python-dotenv
+chromadb
+tiktoken
