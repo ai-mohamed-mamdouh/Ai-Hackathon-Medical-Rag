@@ -203,4 +203,46 @@ class DocumentSplitter :
 
         return result
 
+    def add_chunk_indices(self, documents: list[Document]) -> list[Document]:
+        """
+        Add positional metadata to all final chunks within each original document.
+
+        Adds:
+            - chunk_index
+            - total_chunks
+            - previous_chunk_index
+            - next_chunk_index
+        """
+
+        grouped_documents = {}
+
+        for document in documents:
+            document_id = document.metadata.get("document_id")
+
+            grouped_documents.setdefault(document_id, []).append(document)
+
+        result = []
+
+        for document_chunks in grouped_documents.values():
+            total_chunks = len(document_chunks)
+
+            for chunk_index, chunk in enumerate(document_chunks):
+                chunk.metadata["chunk_index"] = chunk_index
+                chunk.metadata["total_chunks"] = total_chunks
+
+                chunk.metadata["previous_chunk_index"] = (
+                    chunk_index - 1
+                    if chunk_index > 0
+                    else None
+                )
+
+                chunk.metadata["next_chunk_index"] = (
+                    chunk_index + 1
+                    if chunk_index < total_chunks - 1
+                    else None
+                )
+
+                result.append(chunk)
+
+        return result
     

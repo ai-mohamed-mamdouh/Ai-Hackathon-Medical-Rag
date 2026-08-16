@@ -20,11 +20,11 @@ class FileHelper:
     @staticmethod
     def save_temp_file(file: UploadFile) -> str:
         """
-        Save uploaded file temporarily and return its path.
+        Save uploaded file temporarily using its original filename.
         """
-        suffix = Path(file.filename).suffix.lower()
+        filename = Path(file.filename).name
 
-        temp_path = FileHelper.TEMP_DIR / f"{uuid4()}{suffix}"
+        temp_path = FileHelper.TEMP_DIR / filename
 
         with open(temp_path, "wb") as temp_file:
             shutil.copyfileobj(file.file, temp_file)
