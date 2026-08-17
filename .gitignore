@@ -1,7 +1,6 @@
 # Add
 docs
-src/generation
-
+workFlow
 chroma_db
 temp
 # Byte-compiled / optimized / DLL files
