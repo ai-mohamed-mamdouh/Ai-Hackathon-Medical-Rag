@@ -58,7 +58,7 @@ class Retriever:
 
         return self.threshold(reranked_docs)
 
-    def retrieval_pipeline(self, query: Query, reranker_model: RerankerModel, decomposition: bool = False) -> list[list[Document]]:
+    def retrieval_pipeline(self, query: Query, reranker_model: RerankerModel, decomposition: bool = False) -> tuple[list[list[Document]], list[Query]]:
 
         reranker = Reranker(
             model=reranker_model
@@ -81,11 +81,6 @@ class Retriever:
 
             documents_for_queries.append(documents)
 
-        print(len(documents_for_queries))
-        for q in queries :
-            print(q.normalized_query)
-            print('==============')
-
-        return documents_for_queries
+        return documents_for_queries, queries
 
     

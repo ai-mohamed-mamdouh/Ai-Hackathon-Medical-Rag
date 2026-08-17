@@ -13,6 +13,7 @@ retrieval_router = APIRouter(
 
 class RetrieveResponse(BaseModel):
     documents: list[Any] = Field(default_factory=list)
+    queries: list[Any] = Field(default_factory=list)
 
 
 @retrieval_router.post(
@@ -28,10 +29,10 @@ def retrieve(
     
     reriever = Retriever(request.app.state.vector_store)
 
-    documents = reriever.retrieval_pipeline(
+    documents, queries = reriever.retrieval_pipeline(
         query=query,
         reranker_model=request.app.state.reRanker_model,
         decomposition=decomposition
         )
 
-    return RetrieveResponse(documents=documents)
+    return RetrieveResponse(documents=documents, queries=queries)
