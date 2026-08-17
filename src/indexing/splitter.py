@@ -217,7 +217,7 @@ class DocumentSplitter :
         grouped_documents = {}
 
         for document in documents:
-            document_id = document.metadata.get("document_id")
+            document_id = document.metadata.get("file_id")
 
             grouped_documents.setdefault(document_id, []).append(document)
 
