@@ -1,4 +1,7 @@
-```py -3.13 -m venv .venv
+```
+git clone https://github.com/ai-mohamed-mamdouh/Ai-Hackathon-Medical-Rag.git
+
+py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python --version # 3.13
 
