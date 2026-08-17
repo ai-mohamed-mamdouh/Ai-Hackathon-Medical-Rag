@@ -6,18 +6,21 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 class DocumentSplitter :
 
-    def split_documents_by_headings(self, documents: list[Document]) -> list[Document]:
+    def split_documents_by_headings(
+        self,
+        documents: list[Document],
+    ) -> list[Document]:
         """
-        Input:
-            A list of LangChain Document objects, where each Document contains
-            Markdown-formatted text and its existing metadata.
+        Split Markdown documents by headings while propagating heading context
+        across pages belonging to the same file.
 
-        Output:
-            A list of Document objects split into logical sections based on
-            Markdown headings. Each output Document preserves the original metadata,
-            adds heading metadata (h1, h2, h3, h4), and includes a hierarchical
-            "section" path such as "Diabetes > Treatment > Dosage".
+        Each output Document:
+        - Preserves original metadata.
+        - Adds h1, h2, h3, h4 metadata.
+        - Inherits headings from previous pages when needed.
+        - Adds a hierarchical "section" path.
         """
+
         header_splitter = MarkdownHeaderTextSplitter(
             headers_to_split_on=[
                 ("#", "h1"),
@@ -28,15 +31,58 @@ class DocumentSplitter :
             strip_headers=False,
         )
 
-        result = []
+        result: list[Document] = []
+
+        # Keep heading state separately for each file
+        heading_states: dict[str, dict[str, str | None]] = {}
 
         for document in documents:
+            file_id = document.metadata.get("file_id")
+
+            if file_id not in heading_states:
+                heading_states[file_id] = {
+                    "h1": None,
+                    "h2": None,
+                    "h3": None,
+                    "h4": None,
+                }
+
+            current_headers = heading_states[file_id]
+
             sections = header_splitter.split_text(document.page_content)
 
             for section in sections:
+                section_headers = section.metadata
+
+                # New H1 -> reset all lower levels
+                if section_headers.get("h1"):
+                    current_headers["h1"] = section_headers["h1"]
+                    current_headers["h2"] = None
+                    current_headers["h3"] = None
+                    current_headers["h4"] = None
+
+                # New H2 -> reset H3 and H4
+                if section_headers.get("h2"):
+                    current_headers["h2"] = section_headers["h2"]
+                    current_headers["h3"] = None
+                    current_headers["h4"] = None
+
+                # New H3 -> reset H4
+                if section_headers.get("h3"):
+                    current_headers["h3"] = section_headers["h3"]
+                    current_headers["h4"] = None
+
+                # New H4
+                if section_headers.get("h4"):
+                    current_headers["h4"] = section_headers["h4"]
+
                 metadata = {
                     **document.metadata,
-                    **section.metadata,
+                    **{
+                        level: value
+                        for level, value in current_headers.items()
+                        if value is not None
+                    },
                 }
 
                 section_path = " > ".join(
