@@ -76,6 +76,7 @@ class DocumentProcessor :
         chunks = DocumentSplitter().split_documents_to_chunks(blocks)
         chunks = self.enrich_documents(chunks) 
         final_chunks = self.deduplicate_documents(chunks)
+        final_chunks = DocumentSplitter().add_chunk_indices(chunks)
 
         ids = vector_store.generate_chunks_ids(final_chunks)
         ids = vector_store.add_new_documents(vector_store=vector_store.get_vector_store(), chunks=final_chunks, ids=ids)
@@ -95,7 +96,8 @@ class DocumentProcessor :
         print('chunks')
         chunks = self.enrich_documents(chunks) 
         print('enrich chunks')
-        final_chunks = self.deduplicate_documents(chunks)
+        chunks = self.deduplicate_documents(chunks)
+        final_chunks = DocumentSplitter().add_chunk_indices(chunks)
         print('final chunks')
 
         vector_store = VectorStore(embedding_model=embedding_model)

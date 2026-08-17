@@ -1,6 +1,7 @@
 import re
 import unicodedata
 from dataclasses import dataclass
+from src.retrieval.query.llm_for_query import decomposetion_chain
 
 @dataclass
 class Query:
@@ -56,3 +57,29 @@ class QueryProcessor:
         query.normalized_query = text
 
         return query
+
+    def decompose_query(self, query: Query) -> list[Query]:
+        result = decomposetion_chain.invoke({
+            "query": query.original_query
+        })
+
+        return [
+            Query(
+                original_query=query.original_query,
+                normalized_query=sub_query
+            )
+            for sub_query in result["queries"]
+        ]
+
+if __name__ == '__main__' :
+    query = Query(
+        original_query="What are the symptoms and treatments of diabetes?"
+    )
+    result = QueryProcessor().decompose_query(query=query)
+
+    print('reslut=====================')
+    for q in result :
+        print(q.original_query)
+        print(q.normalized_query)
+        print('===========================')
+    
