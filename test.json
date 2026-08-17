@@ -1,0 +1,139 @@
+[
+  {
+    "query_id": "q_001",
+    "query": "What are the common causes of peripheral vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_5",
+      "giddiness_5b65fd85_chunk_6"
+    ]
+  },
+  {
+    "query_id": "q_002",
+    "query": "What neurological symptoms and conditions are associated with central vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_7"
+    ]
+  },
+  {
+    "query_id": "q_003",
+    "query": "How useful is patient history in diagnosing vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_9"
+    ]
+  },
+  {
+    "query_id": "q_004",
+    "query": "How can the duration of vertigo help distinguish peripheral from central causes?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_9",
+      "giddiness_5b65fd85_chunk_10"
+    ]
+  },
+  {
+    "query_id": "q_005",
+    "query": "Which positional changes can provoke peripheral vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_11"
+    ]
+  },
+  {
+    "query_id": "q_006",
+    "query": "What associated symptoms suggest that vertigo is peripheral rather than central?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_12"
+    ]
+  },
+  {
+    "query_id": "q_007",
+    "query": "What clinical examinations and vestibular tests were performed on the patients in the study?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_16"
+    ]
+  },
+  {
+    "query_id": "q_008",
+    "query": "Which age group had the highest number of patients with vertigo in the study?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_18",
+      "giddiness_5b65fd85_chunk_19"
+    ]
+  },
+  {
+    "query_id": "q_009",
+    "query": "What was the male-to-female distribution among the patients?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_21",
+      "giddiness_5b65fd85_chunk_22"
+    ]
+  },
+  {
+    "query_id": "q_010",
+    "query": "What was the most common presenting complaint among patients with giddiness?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_23",
+      "giddiness_5b65fd85_chunk_24"
+    ]
+  },
+  {
+    "query_id": "q_011",
+    "query": "What was the most common associated symptom in patients with vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_25",
+      "giddiness_5b65fd85_chunk_26"
+    ]
+  },
+  {
+    "query_id": "q_012",
+    "query": "What were the most common comorbidities found among the patients?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_27",
+      "giddiness_5b65fd85_chunk_28"
+    ]
+  },
+  {
+    "query_id": "q_013",
+    "query": "How many patients had a positive Dix-Hallpike test?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_30",
+      "giddiness_5b65fd85_chunk_31"
+    ]
+  },
+  {
+    "query_id": "q_014",
+    "query": "What were the caloric test findings among the patients?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_32",
+      "giddiness_5b65fd85_chunk_33"
+    ]
+  },
+  {
+    "query_id": "q_015",
+    "query": "What were the peripheral causes of vertigo identified in the study?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_33",
+      "giddiness_5b65fd85_chunk_34"
+    ]
+  },
+  {
+    "query_id": "q_016",
+    "query": "What central causes of vertigo were identified in the study?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_35",
+      "giddiness_5b65fd85_chunk_36"
+    ]
+  },
+  {
+    "query_id": "q_017",
+    "query": "Why is the Romberg test considered less reliable for diagnosing vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_38"
+    ]
+  },
+  {
+    "query_id": "q_018",
+    "query": "Why is careful history taking and clinical assessment important when evaluating vertigo?",
+    "relevant_chunk_ids": [
+      "giddiness_5b65fd85_chunk_42"
+    ]
+  }
+]

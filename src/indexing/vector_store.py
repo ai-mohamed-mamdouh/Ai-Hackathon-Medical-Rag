@@ -2,7 +2,7 @@ import hashlib
 from src.config.settings import settings
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
-
+from src.indexing.embeddings import Embedding
 class VectorStore:
     def __init__(self, embedding_model):
         self.embedding_model = embedding_model
@@ -105,4 +105,33 @@ class VectorStore:
         )
 
         return new_ids
-    
+
+    def get_chunks_by_file_id(
+        self,
+        file_id: str,
+    ) -> list[Document]:
+
+        results = self.vector_store.get(
+            where={"file_id": file_id}
+        )
+
+        return [
+            Document(
+                page_content=document,
+                metadata=metadata,
+                id=chunk_id,
+            )
+            for document, metadata, chunk_id in zip(
+                results["documents"],
+                results["metadatas"],
+                results["ids"],
+            )
+            if document is not None
+        ]
+
+if __name__ == '__main__' :
+    chunks = VectorStore(embedding_model=Embedding().get_embedding_model()).get_chunks_by_file_id( file_id='giddiness_5b65fd85')
+    for chunk in chunks:
+        print(chunk.page_content)
+        print(chunk.metadata)
+        print('===================================')
