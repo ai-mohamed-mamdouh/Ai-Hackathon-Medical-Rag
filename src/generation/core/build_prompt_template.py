@@ -5,7 +5,7 @@ from src.retrieval.query.query import Query
 def build_prompt_template(
     queries: list[Query],
     documents: list[list[Document]],
-    system_prompt: str = RAG_SYSTEM_PROMPT
+    system_prompt: str = RAG_SYSTEM_PROMPT,
 ) -> str:
 
     if len(queries) != len(documents):
@@ -27,6 +27,18 @@ ORIGINAL QUERY:
 """
     ]
 
+    # No decomposition
+    if len(queries) == 1:
+        prompt_parts.append("\nCONTEXT:\n")
+
+        add_documents(
+            prompt_parts=prompt_parts,
+            documents=documents[0]
+        )
+
+        return "\n".join(prompt_parts)
+
+    # With decomposition
     for query_index, (query, query_docs) in enumerate(
         zip(queries, documents),
         start=1
@@ -42,38 +54,45 @@ CONTEXT:
 """
         )
 
-        if not query_docs:
-            prompt_parts.append("No relevant documents found.\n")
-            continue
+        add_documents(
+            prompt_parts=prompt_parts,
+            documents=query_docs
+        )
 
-        for doc_index, doc in enumerate(query_docs, start=1):
-            metadata = doc.metadata
+    return "\n".join(prompt_parts)
 
-            file_name = metadata.get("file_name", "unknown")
-            page_number = metadata.get("page_number", "unknown")
-            section = metadata.get("section")
-            relevance_score = metadata.get("rerank_score", 0)
 
-            metadata_lines = [
-                f"File: {file_name}",
-                f"Page: {page_number}",
-                f"Relevance Score: {relevance_score:.4f}",
-            ]
+def add_documents(
+    prompt_parts: list[str],
+    documents: list[Document]
+) -> None:
 
-            if section:
-                metadata_lines.append(
-                    f"Section: {section}"
-                )
+    if not documents:
+        prompt_parts.append("No relevant documents found.")
+        return
 
-            prompt_parts.append(
-                f"""
+    for doc_index, doc in enumerate(documents, start=1):
+        metadata = doc.metadata
+
+        metadata_lines = [
+            f"File: {metadata.get('file_name', 'unknown')}",
+            f"Page: {metadata.get('page_number', 'unknown')}",
+            f"Relevance Score: {metadata.get('rerank_score', 0):.4f}",
+        ]
+
+        section = metadata.get("section")
+
+        if section:
+            metadata_lines.append(
+                f"Section: {section}"
+            )
+
+        prompt_parts.append(
+            f"""
 [Document {doc_index}]
 {chr(10).join(metadata_lines)}
 
 Content:
 {doc.page_content}
 """
-            )
-
-    return "\n".join(prompt_parts)
-
+        )
