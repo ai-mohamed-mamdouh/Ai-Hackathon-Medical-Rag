@@ -29,7 +29,7 @@ def retrieve(
     
     reriever = Retriever(request.app.state.vector_store)
 
-    documents, queries = reriever.retrieval_pipeline(
+    documents, queries = reriever.retrieval_pipeline_with_track(
         query=query,
         reranker_model=request.app.state.reRanker_model,
         decomposition=decomposition
