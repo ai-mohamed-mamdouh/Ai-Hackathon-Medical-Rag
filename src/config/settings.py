@@ -17,7 +17,7 @@ class Settings:
 
     EMBEDDING_MODEL_NAME="sentence-transformers/all-MiniLM-L6-v2"
     GROQ_MODEL_NAME=''
-    QUERY_MODEL_NAME='llama-3.3-70b-versatile'
+    QUERY_MODEL_NAME='openai/gpt-oss-20b'
 
     COLLECTION_NAME="medical_giddiness"
 
