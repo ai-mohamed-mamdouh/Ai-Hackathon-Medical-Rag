@@ -20,6 +20,7 @@ async def lifespan(app: FastAPI):
 
     app.state.vector_store = VectorStore( Embedding().get_embedding_model() )
     app.state.reRanker_model=RerankerModel().get_reranker_model()
+    app.state.embedding_model=Embedding().get_embedding_model()
 
     logger.info("Embedding model loaded successfully.")
 
