@@ -34,7 +34,8 @@ class PDFLoader(BaseLoader):
         stat = path.stat()
 
         file_metadata = {
-            "file_id": hashlib.sha256(path.read_bytes()).hexdigest(),
+            "file_id": hashlib.sha256(path.name).hexdigest(),
+            "version_id": hashlib.sha256(path.read_bytes()).hexdigest(),
             "source": str(path),
             "source_type": "pdf",
             "file_name": path.name,
