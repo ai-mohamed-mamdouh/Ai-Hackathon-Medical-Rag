@@ -1,11 +1,13 @@
 import hashlib
+from pathlib import Path
 from langchain_core.documents import Document
 from src.indexing.loaders import (PDFLoader)
 from src.indexing.loader import DocumentLoader
 from src.indexing.cleaner import DocumentCleaner
 from src.indexing.splitter import DocumentSplitter
-# from src.indexing.embeddings import Embedding
+from src.indexing.embeddings import Embedding
 from src.indexing.vector_store import VectorStore
+from langchain_chroma import Chroma
 
 
 class DocumentProcessor :
@@ -80,7 +82,7 @@ class DocumentProcessor :
 
         chunks = self.enrich_documents(chunks) 
         final_chunks = self.deduplicate_documents(chunks)
-        final_chunks = DocumentSplitter().add_chunk_indices(final_chunks)
+        final_chunks = DocumentSplitter().add_chunk_indices_ids(final_chunks)
 
         ids = vector_store.generate_chunks_ids(final_chunks)
         ids = vector_store.add_new_documents(vector_store=vector_store.get_vector_store(), chunks=final_chunks, ids=ids)
@@ -101,7 +103,7 @@ class DocumentProcessor :
         chunks = self.enrich_documents(chunks) 
         print('enrich chunks')
         chunks = self.deduplicate_documents(chunks)
-        final_chunks = DocumentSplitter().add_chunk_indices(chunks)
+        final_chunks = DocumentSplitter().add_chunk_indices_ids(chunks)
         print('final chunks')
 
         vector_store = VectorStore(embedding_model=embedding_model)
@@ -114,7 +116,573 @@ class DocumentProcessor :
         print('=====================================================================')
         return 'Document Added'
 
+    def update_document(self, file_id: str, new_file_path: str, vector_store: Chroma):
+        """
+        Update an existing document in Chroma.
 
-if __name__ == '__main__' :
-    DocumentProcessor().document_processing_pipeline('docs/MDKLi.pdf')
+        Identity:
+            file_id    = hash(filename)
+            version_id = hash(file bytes)
+            chunk_id   = hash(page_content)
 
+        Reconciliation:
+            deleted   = old_chunk_ids - new_chunk_ids
+            added     = new_chunk_ids - old_chunk_ids
+            unchanged = old_chunk_ids & new_chunk_ids
+
+        Optimizations:
+            - Query Chroma using file_id filter.
+            - Read metadata only for modern indexed documents.
+            - Reuse chunk_id stored in metadata.
+            - Hash old page_content only for legacy records.
+            - Stream SHA256 instead of reading full PDF into RAM.
+            - Create DocumentSplitter only once.
+            - Embed only added/changed chunks.
+            - Update metadata only for unchanged chunks.
+        """
+
+        # =========================================================
+        # 1. Validate file
+        # =========================================================
+
+        path = Path(new_file_path)
+
+        if not path.exists():
+            raise FileNotFoundError(
+                f"File not found: {new_file_path}"
+            )
+
+        if not path.is_file():
+            raise ValueError(
+                f"Path is not a file: {new_file_path}"
+            )
+
+
+        file_hasher = hashlib.sha256()
+
+        with path.open("rb") as file:
+            while True:
+                block = file.read(1024 * 1024)  # 1 MB
+
+                if not block:
+                    break
+
+                file_hasher.update(block)
+
+        new_version_id = file_hasher.hexdigest()
+
+
+        existing_data = vector_store.get(
+            where={
+                "file_id": file_id
+            },
+            include=[
+                "metadatas"
+            ],
+        )
+
+        existing_ids = existing_data.get(
+            "ids", []
+        )
+
+        existing_metadatas = existing_data.get(
+            "metadatas", []
+        )
+
+        old_records = []
+
+    
+
+        if existing_ids:
+
+            # -----------------------------------------------------
+            # Check current version
+            # -----------------------------------------------------
+
+            old_versions = {
+                metadata.get("version_id")
+                for metadata in existing_metadatas
+                if metadata
+                and metadata.get("version_id")
+            }
+
+            # -----------------------------------------------------
+            # Same exact file
+            #
+            # Stop Before:
+            # PDF parsing
+            # cleaning
+            # chunking
+            # embedding
+            # -----------------------------------------------------
+
+            if (
+                len(old_versions) == 1
+                and new_version_id in old_versions
+            ):
+                return {
+                    "status": "no_change",
+                    "file_id": file_id,
+                    "version_id": new_version_id,
+                    "added": 0,
+                    "deleted": 0,
+                    "unchanged": len(existing_ids),
+                }
+
+            # -----------------------------------------------------
+            # Build old records using metadata only
+            # -----------------------------------------------------
+
+            missing_chunk_id_records = []
+
+            for record_id, metadata in zip(
+                existing_ids,
+                existing_metadatas,
+            ):
+                metadata = metadata or {}
+
+                chunk_id = metadata.get(
+                    "chunk_id"
+                )
+
+                # Modern record
+                if chunk_id:
+
+                    old_records.append({
+                        "record_id": record_id,
+                        "chunk_id": chunk_id,
+                        "metadata": metadata,
+                    })
+
+                else:
+                    # Transitional record:
+                    missing_chunk_id_records.append(
+                        record_id
+                    )
+
+
+            if missing_chunk_id_records:
+
+                missing_data = vector_store._collection.get(
+                    ids=missing_chunk_id_records,
+                    include=[
+                        "documents",
+                        "metadatas",
+                    ],
+                )
+
+                missing_ids = missing_data.get(
+                    "ids", []
+                )
+
+                missing_documents = missing_data.get(
+                    "documents", []
+                )
+
+                missing_metadatas = missing_data.get(
+                    "metadatas", []
+                )
+
+                for record_id, document, metadata in zip(
+                    missing_ids,
+                    missing_documents,
+                    missing_metadatas,
+                ):
+
+                    if not document:
+                        continue
+
+                    chunk_id = hashlib.sha256(
+                        document.encode("utf-8")
+                    ).hexdigest()
+
+                    old_records.append({
+                        "record_id": record_id,
+                        "chunk_id": chunk_id,
+                        "metadata": metadata or {},
+                    })
+
+        else:
+
+            legacy_data = vector_store.get(
+                include=[
+                    "documents",
+                    "metadatas",
+                ]
+            )
+
+            legacy_ids = legacy_data.get(
+                "ids", []
+            )
+
+            legacy_documents = legacy_data.get(
+                "documents", []
+            )
+
+            legacy_metadatas = legacy_data.get(
+                "metadatas", []
+            )
+
+            for record_id, document, metadata in zip(
+                legacy_ids,
+                legacy_documents,
+                legacy_metadatas,
+            ):
+
+                metadata = metadata or {}
+
+                source = metadata.get(
+                    "source"
+                )
+
+                if not source:
+                    continue
+
+                source_filename = Path(
+                    str(source)
+                ).name
+
+                calculated_file_id = hashlib.sha256(
+                    source_filename.encode(
+                        "utf-8"
+                    )
+                ).hexdigest()
+
+                if calculated_file_id != file_id:
+                    continue
+
+                if not document:
+                    continue
+
+                # Legacy record doesn't have chunk_id,
+                # so calculate it once.
+                chunk_id = hashlib.sha256(
+                    document.encode("utf-8")
+                ).hexdigest()
+
+                old_records.append({
+                    "record_id": record_id,
+                    "chunk_id": chunk_id,
+                    "metadata": metadata,
+                })
+
+        # =========================================================
+        # 6. Ensure old document exists
+        # =========================================================
+
+        if not old_records:
+            raise ValueError(
+                f"No indexed document found for file_id: {file_id}"
+            )
+
+        # =========================================================
+        # 7. Build OLD chunks map
+        # =========================================================
+
+        old_chunks = {
+            record["chunk_id"]: record
+            for record in old_records
+        }
+
+
+        document_loader = DocumentLoader()
+
+        document_cleaner = DocumentCleaner()
+
+        document_splitter = DocumentSplitter()
+
+        # ---------------------------------------------------------
+        # LOAD
+        # ---------------------------------------------------------
+
+        documents = document_loader.load_data(
+            PDFLoader(
+                path=new_file_path
+            )
+        )
+
+        # ---------------------------------------------------------
+        # CLEAN
+        # ---------------------------------------------------------
+
+        clean_documents = (
+            document_cleaner.clean_documents(
+                documents=documents
+            )
+        )
+
+        # ---------------------------------------------------------
+        # HEADINGS
+        # ---------------------------------------------------------
+
+        sections = (
+            document_splitter
+            .split_documents_by_headings(
+                clean_documents
+            )
+        )
+
+        # ---------------------------------------------------------
+        # TEXT + TABLES
+        # ---------------------------------------------------------
+
+        blocks = (
+            document_splitter
+            .split_text_and_tables(
+                sections
+            )
+        )
+
+        # ---------------------------------------------------------
+        # CHUNKING
+        # ---------------------------------------------------------
+
+        chunks = (
+            document_splitter
+            .split_documents_to_chunks(
+                blocks
+            )
+        )
+
+        # ---------------------------------------------------------
+        # ENRICHMENT
+        # ---------------------------------------------------------
+
+        chunks = self.enrich_documents(
+            chunks
+        )
+
+        # ---------------------------------------------------------
+        # DEDUPLICATION
+        # ---------------------------------------------------------
+
+        final_chunks = self.deduplicate_documents(
+            chunks
+        )
+
+        # ---------------------------------------------------------
+        # CHUNK INDICES
+        # ---------------------------------------------------------
+
+        final_chunks = (
+            document_splitter
+            .add_chunk_indices_ids(
+                final_chunks
+            )
+        )
+
+
+
+        if not final_chunks:
+            raise RuntimeError(
+                "The updated document produced zero chunks. "
+                "Update cancelled. "
+                "Old chunks were NOT deleted."
+            )
+
+        # =========================================================
+        # 10. Build NEW chunks map
+        # =========================================================
+
+        new_chunks = {}
+
+        for chunk in final_chunks:
+
+            content = chunk.page_content
+
+            if not content:
+                continue
+
+            if not content.strip():
+                continue
+
+            # -----------------------------------------------------
+            # chunk_id = SHA256(page_content)
+            # -----------------------------------------------------
+
+            chunk_id = hashlib.sha256(
+                content.encode("utf-8")
+            ).hexdigest()
+
+            # -----------------------------------------------------
+            # Add/update identity metadata
+            # -----------------------------------------------------
+
+            chunk.metadata[
+                "file_id"
+            ] = file_id
+
+            chunk.metadata[
+                "version_id"
+            ] = new_version_id
+
+            chunk.metadata[
+                "chunk_id"
+            ] = chunk_id
+
+            new_chunks[
+                chunk_id
+            ] = chunk
+
+        # =========================================================
+        # 11. Safety check
+        # =========================================================
+
+        if not new_chunks:
+            raise RuntimeError(
+                "No valid chunks generated from updated document."
+            )
+
+        # =========================================================
+        # 12. Reconciliation
+        # =========================================================
+
+        old_chunk_ids = set(
+            old_chunks
+        )
+
+        new_chunk_ids = set(
+            new_chunks
+        )
+
+        deleted_chunk_ids = (
+            old_chunk_ids
+            - new_chunk_ids
+        )
+
+        added_chunk_ids = (
+            new_chunk_ids
+            - old_chunk_ids
+        )
+
+      
+        unchanged_chunk_ids = (
+            old_chunk_ids
+            & new_chunk_ids
+        )
+
+
+
+        if added_chunk_ids:
+
+            chunks_to_add = []
+
+            ids_to_add = []
+
+            for chunk_id in added_chunk_ids:
+
+                chunk = new_chunks[
+                    chunk_id
+                ]
+
+
+
+                record_id = hashlib.sha256(
+                    f"{file_id}|{chunk_id}".encode(
+                        "utf-8"
+                    )
+                ).hexdigest()
+
+                chunks_to_add.append(
+                    chunk
+                )
+
+                ids_to_add.append(
+                    record_id
+                )
+
+            vector_store.add_documents(
+                documents=chunks_to_add,
+                ids=ids_to_add,
+            )
+
+
+
+        if unchanged_chunk_ids:
+
+            update_ids = []
+
+            update_metadatas = []
+
+            for chunk_id in unchanged_chunk_ids:
+
+                old_record = old_chunks[
+                    chunk_id
+                ]
+
+                new_chunk = new_chunks[
+                    chunk_id
+                ]
+
+                update_ids.append(
+                    old_record["record_id"]
+                )
+
+                update_metadatas.append(
+                    new_chunk.metadata
+                )
+
+            vector_store._collection.update(
+                ids=update_ids,
+                metadatas=update_metadatas,
+            )
+
+
+
+        if deleted_chunk_ids:
+
+            deleted_record_ids = [
+                old_chunks[chunk_id][
+                    "record_id"
+                ]
+                for chunk_id
+                in deleted_chunk_ids
+            ]
+
+            vector_store.delete(
+                ids=deleted_record_ids
+            )
+
+        # =========================================================
+        # 16. Result
+        # =========================================================
+
+        return {
+            "status": "updated",
+
+            "file_id": file_id,
+
+            "new_version_id": new_version_id,
+
+            "old_chunks": len(
+                old_chunk_ids
+            ),
+
+            "new_chunks": len(
+                new_chunk_ids
+            ),
+
+            "added": len(
+                added_chunk_ids
+            ),
+
+            "deleted": len(
+                deleted_chunk_ids
+            ),
+
+            "unchanged": len(
+                unchanged_chunk_ids
+            ),
+        }
+
+# if __name__ == '__main__' :
+#     file_path = "docs/giddiness.pdf"
+#     file_name = Path(file_path).name
+#     file_id = hashlib.sha256(
+#         file_name.encode("utf-8")
+#     ).hexdigest()
+
+#     vector_store = VectorStore(embedding_model=Embedding().get_embedding_model() )
+#     message = DocumentProcessor().update_document(file_id ,'docs/Clinical management of COVID-19 living guideline.pdf', vector_store=vector_store.get_vector_store())
+#     print('=========================================')
+#     print(message)

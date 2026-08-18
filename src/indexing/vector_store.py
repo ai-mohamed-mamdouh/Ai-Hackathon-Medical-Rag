@@ -13,7 +13,7 @@ class VectorStore:
         return Chroma(
             collection_name=self.collection_name,
             embedding_function=self.embedding_model,
-            persist_directory="./chroma_db",
+            persist_directory=settings.CHROMA_PERSIST_DIRECTORY,
         )
 
     def generate_chunks_ids(

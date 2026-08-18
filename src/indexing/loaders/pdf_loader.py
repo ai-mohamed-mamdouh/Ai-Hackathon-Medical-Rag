@@ -1,5 +1,6 @@
 import fitz
 import uuid
+import hashlib
 import pymupdf4llm
 from pathlib import Path
 from datetime import datetime
@@ -33,7 +34,8 @@ class PDFLoader(BaseLoader):
         stat = path.stat()
 
         file_metadata = {
-            "file_id": f"{path.stem}_{str(uuid.uuid4())[:8]}",
+            "file_id": hashlib.sha256(path.name.encode("utf-8")).hexdigest(),
+            "version_id": hashlib.sha256(path.read_bytes()).hexdigest(),
             "source": str(path),
             "source_type": "pdf",
             "file_name": path.name,

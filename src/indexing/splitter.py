@@ -1,23 +1,28 @@
 import re
+import hashlib
 from src.config.settings import settings
+from transformers import AutoTokenizer
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 class DocumentSplitter :
 
-    def split_documents_by_headings(self, documents: list[Document]) -> list[Document]:
+    def split_documents_by_headings(
+        self,
+        documents: list[Document],
+    ) -> list[Document]:
         """
-        Input:
-            A list of LangChain Document objects, where each Document contains
-            Markdown-formatted text and its existing metadata.
+        Split Markdown documents by headings while propagating heading context
+        across pages belonging to the same file.
 
-        Output:
-            A list of Document objects split into logical sections based on
-            Markdown headings. Each output Document preserves the original metadata,
-            adds heading metadata (h1, h2, h3, h4), and includes a hierarchical
-            "section" path such as "Diabetes > Treatment > Dosage".
+        Each output Document:
+        - Preserves original metadata.
+        - Adds h1, h2, h3, h4 metadata.
+        - Inherits headings from previous pages when needed.
+        - Adds a hierarchical "section" path.
         """
+
         header_splitter = MarkdownHeaderTextSplitter(
             headers_to_split_on=[
                 ("#", "h1"),
@@ -28,15 +33,58 @@ class DocumentSplitter :
             strip_headers=False,
         )
 
-        result = []
+        result: list[Document] = []
+
+        # Keep heading state separately for each file
+        heading_states: dict[str, dict[str, str | None]] = {}
 
         for document in documents:
+            file_id = document.metadata.get("file_id")
+
+            if file_id not in heading_states:
+                heading_states[file_id] = {
+                    "h1": None,
+                    "h2": None,
+                    "h3": None,
+                    "h4": None,
+                }
+
+            current_headers = heading_states[file_id]
+
             sections = header_splitter.split_text(document.page_content)
 
             for section in sections:
+                section_headers = section.metadata
+
+                # New H1 -> reset all lower levels
+                if section_headers.get("h1"):
+                    current_headers["h1"] = section_headers["h1"]
+                    current_headers["h2"] = None
+                    current_headers["h3"] = None
+                    current_headers["h4"] = None
+
+                # New H2 -> reset H3 and H4
+                if section_headers.get("h2"):
+                    current_headers["h2"] = section_headers["h2"]
+                    current_headers["h3"] = None
+                    current_headers["h4"] = None
+
+                # New H3 -> reset H4
+                if section_headers.get("h3"):
+                    current_headers["h3"] = section_headers["h3"]
+                    current_headers["h4"] = None
+
+                # New H4
+                if section_headers.get("h4"):
+                    current_headers["h4"] = section_headers["h4"]
+
                 metadata = {
                     **document.metadata,
-                    **section.metadata,
+                    **{
+                        level: value
+                        for level, value in current_headers.items()
+                        if value is not None
+                    },
                 }
 
                 section_path = " > ".join(
@@ -171,9 +219,9 @@ class DocumentSplitter :
                 - Documents with content_type="table" are preserved as-is.
                 - All original metadata is preserved in the output Documents.
         """
-
-        splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            encoding_name="cl100k_base",
+        tokenizer = AutoTokenizer.from_pretrained(settings.EMBEDDING_MODEL_NAME)
+        splitter = RecursiveCharacterTextSplitter.from_huggingface_tokenizer(
+            tokenizer=tokenizer,
             chunk_size=chunk_size,
             chunk_overlap=chunk_overlap,
             separators=[
@@ -203,11 +251,12 @@ class DocumentSplitter :
 
         return result
 
-    def add_chunk_indices(self, documents: list[Document]) -> list[Document]:
-        """
-        Add positional metadata to all final chunks within each original document.
+    def add_chunk_indices_ids(self, documents: list[Document]) -> list[Document]:
+        """Add positional and unique identifier metadata to all final chunks within
+        each original document.
 
         Adds:
+            - chunk_id
             - chunk_index
             - total_chunks
             - previous_chunk_index
@@ -217,7 +266,7 @@ class DocumentSplitter :
         grouped_documents = {}
 
         for document in documents:
-            document_id = document.metadata.get("document_id")
+            document_id = document.metadata.get("file_id")
 
             grouped_documents.setdefault(document_id, []).append(document)
 
@@ -227,22 +276,22 @@ class DocumentSplitter :
             total_chunks = len(document_chunks)
 
             for chunk_index, chunk in enumerate(document_chunks):
+                # Generate a unique hash for the chunk content
+                chunk.metadata["chunk_id"] = hashlib.sha256(
+                    chunk.page_content.encode("utf-8")
+                ).hexdigest()
+
                 chunk.metadata["chunk_index"] = chunk_index
                 chunk.metadata["total_chunks"] = total_chunks
 
                 chunk.metadata["previous_chunk_index"] = (
-                    chunk_index - 1
-                    if chunk_index > 0
-                    else None
+                    chunk_index - 1 if chunk_index > 0 else None
                 )
 
                 chunk.metadata["next_chunk_index"] = (
-                    chunk_index + 1
-                    if chunk_index < total_chunks - 1
-                    else None
+                    chunk_index + 1 if chunk_index < total_chunks - 1 else None
                 )
 
                 result.append(chunk)
 
         return result
-    

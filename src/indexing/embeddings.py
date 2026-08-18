@@ -7,9 +7,27 @@ class Embedding :
         self.embedding_model = self.get_embedding_model()
 
     def get_embedding_model(self) -> HuggingFaceEmbeddings:
-        return HuggingFaceEmbeddings(
-            model_name=settings.EMBEDDING_MODEL_NAME
+        embeddings = HuggingFaceEmbeddings(
+            model_name=settings.EMBEDDING_MODEL_NAME,
+
+            model_kwargs={
+                "device": settings.EMBEDDING_DEVICE,
+            },
+
+            # Documents
+            encode_kwargs={
+                "batch_size": settings.EMBEDDING_BATCH_SIZE,
+                "normalize_embeddings": True,
+            },
+
+            # Queries
+            query_encode_kwargs={
+                "batch_size": settings.EMBEDDING_BATCH_SIZE,
+                "normalize_embeddings": True,
+                "prompt_name": "query",
+            },
         )
+        return embeddings
 
     def embeddingQuery(self, query : str) :
         return self.embedding_model.embed_query(text=query)
