@@ -1,6 +1,7 @@
 import re
 import hashlib
 from src.config.settings import settings
+from transformers import AutoTokenizer
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -218,9 +219,9 @@ class DocumentSplitter :
                 - Documents with content_type="table" are preserved as-is.
                 - All original metadata is preserved in the output Documents.
         """
-
-        splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            encoding_name="cl100k_base",
+        tokenizer = AutoTokenizer.from_pretrained(settings.EMBEDDING_MODEL_NAME)
+        splitter = RecursiveCharacterTextSplitter.from_huggingface_tokenizer(
+            tokenizer=tokenizer,
             chunk_size=chunk_size,
             chunk_overlap=chunk_overlap,
             separators=[
