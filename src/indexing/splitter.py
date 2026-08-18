@@ -1,4 +1,5 @@
 import re
+import hashlib
 from src.config.settings import settings
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
@@ -249,11 +250,12 @@ class DocumentSplitter :
 
         return result
 
-    def add_chunk_indices(self, documents: list[Document]) -> list[Document]:
-        """
-        Add positional metadata to all final chunks within each original document.
+    def add_chunk_indices_ids(self, documents: list[Document]) -> list[Document]:
+        """Add positional and unique identifier metadata to all final chunks within
+        each original document.
 
         Adds:
+            - chunk_id
             - chunk_index
             - total_chunks
             - previous_chunk_index
@@ -273,22 +275,22 @@ class DocumentSplitter :
             total_chunks = len(document_chunks)
 
             for chunk_index, chunk in enumerate(document_chunks):
+                # Generate a unique hash for the chunk content
+                chunk.metadata["chunk_id"] = hashlib.sha256(
+                    chunk.page_content.encode("utf-8")
+                ).hexdigest()
+
                 chunk.metadata["chunk_index"] = chunk_index
                 chunk.metadata["total_chunks"] = total_chunks
 
                 chunk.metadata["previous_chunk_index"] = (
-                    chunk_index - 1
-                    if chunk_index > 0
-                    else None
+                    chunk_index - 1 if chunk_index > 0 else None
                 )
 
                 chunk.metadata["next_chunk_index"] = (
-                    chunk_index + 1
-                    if chunk_index < total_chunks - 1
-                    else None
+                    chunk_index + 1 if chunk_index < total_chunks - 1 else None
                 )
 
                 result.append(chunk)
 
         return result
-    
