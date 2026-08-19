@@ -1,43 +1,56 @@
+from __future__ import annotations
+
 from typing import Any
-from src.retrieval.query.query import Query
+
+from fastapi import APIRouter, status
 from pydantic import BaseModel, Field
-from src.retrieval import Retriever
-from fastapi import APIRouter, Request, status
-from src.generation.core.build_prompt_template import build_prompt_template
+
+from src.generation.invoke_graph import invoke_medical_rag
+from src.generation.orchestration.medical_rag.state import MedicalRAGState
+
 
 generation_router = APIRouter(
-    prefix="/generation",
+    prefix="/Generation",
     tags=["Generation"],
 )
 
 
-class RetrieveResponse(BaseModel):
-    documents: list[Any] = Field(default_factory=list)
-    queries: list[Any] = Field(default_factory=list)
+class GenerateRequest(BaseModel):
+    """Request body for medical RAG generation."""
 
-
-@generation_router.post(
-    "/generation",
-    # response_model=RetrieveResponse,
-    status_code=status.HTTP_200_OK,
-)
-def generation(
-    query: Query,
-    request: Request,
-    decomposition:bool,
-) -> str:
-    
-    reriever = Retriever(request.app.state.vector_store)
-
-    documents, queries = reriever.retrieval_pipeline(
-        query=query,
-        reranker_model=request.app.state.reRanker_model,
-        decomposition=decomposition
-        )
-    prompt = build_prompt_template(
-        queries=queries,
-        documents=documents
+    original_query: str = Field(
+        ...,
+        min_length=1,
+        description="The user's medical question.",
     )
 
 
-    return prompt
+class GenerateResponse(BaseModel):
+    """Response returned by the medical RAG API."""
+
+    answer: str
+    sources: list[dict[str, Any]] = Field(default_factory=list)
+
+
+@generation_router.post(
+    "/generate",
+    response_model=GenerateResponse,
+    status_code=status.HTTP_200_OK,
+)
+async def generate(
+    payload: GenerateRequest,
+) -> GenerateResponse:
+    """Run the medical RAG workflow and return the final answer."""
+
+    initial_state: MedicalRAGState = {
+        "original_query": payload.original_query,
+    }
+
+    final_response, _ = await invoke_medical_rag(
+        initial_state=initial_state,
+    )
+
+    return GenerateResponse(
+        answer=final_response.answer,
+        sources=final_response.sources,
+    )

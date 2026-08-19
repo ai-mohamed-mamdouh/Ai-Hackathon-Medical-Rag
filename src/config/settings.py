@@ -1,35 +1,55 @@
 from pathlib import Path
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+from pydantic import Field, PositiveFloat, SecretStr
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
-class Settings:
-    BASE_DIR = Path(__file__).resolve().parents[2]
 
-    DATA_DIR = BASE_DIR / "docs"
-    ALLOWED_EXTENSIONS = {"pdf"}
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=True,
+        extra="ignore",
+    )
 
-    COLLECTION_NAME="medical_giddiness"
-    CHROMA_PERSIST_DIRECTORY="./chroma_db"
+    # Secrets
+    GROQ_API_KEY: SecretStr = Field(repr=False)
 
-    TOP_K=4
-    RRF_K=60
-    CHUNK_SIZE = 1000
-    CHUNK_OVERLAP = 100
+    # Retrieval API
+    RETRIEVAL_BASE_URL: str = "http://127.0.0.1:8000"
+    RETRIEVAL_TIMEOUT: PositiveFloat = 30.0
 
-    EMBEDDING_MODEL_NAME = "jinaai/jina-embeddings-v2-small-en"
-    EMBEDDING_DEVICE = "cpu"
-    EMBEDDING_BATCH_SIZE = 8
+    # Paths
+    BASE_DIR: Path = Path(__file__).resolve().parents[2]
+    DATA_DIR: Path = BASE_DIR / "docs"
 
-    GROQ_MODEL_NAME=''
-    QUERY_MODEL_NAME='openai/gpt-oss-20b'
+    ALLOWED_EXTENSIONS: set[str] = {"pdf"}
 
-    COLLECTION_NAME="medical_giddiness"
+    # Vector DB
+    COLLECTION_NAME: str = "medical_giddiness"
+    CHROMA_PERSIST_DIRECTORY: str = "./chroma_db"
 
-    TOP_K=4
-    RRF_K=60
-    RERANKER_MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L2-v2"  # "cross-encoder/ms-marco-MiniLM-L6-v2"
+    # Retrieval
+    TOP_K: int = 4
+    RRF_K: int = 60
+    RELEVANCE_THRESHOLD: float = 0.8
 
-    RELEVANCE_THRESHOLD=0.8
+    # Chunking
+    CHUNK_SIZE: int = 1000
+    CHUNK_OVERLAP: int = 100
+
+    # Embedding
+    EMBEDDING_MODEL_NAME: str = "jinaai/jina-embeddings-v2-small-en"
+    EMBEDDING_DEVICE: str = "cpu"
+    EMBEDDING_BATCH_SIZE: int = 8
+
+    # LLM
+    QUERY_MODEL_NAME: str = "openai/gpt-oss-20b"
+    GROQ_MODEL_NAME: str = "openai/gpt-oss-120b"
+    SMALL_GROQ_MODEL_NAME: str = "openai/gpt-oss-20b"
+
+    # Reranker
+    RERANKER_MODEL_NAME: str = "cross-encoder/ms-marco-MiniLM-L2-v2"
+
+
 settings = Settings()

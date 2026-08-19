@@ -4,13 +4,13 @@ import warnings
 warnings.filterwarnings("ignore")
 
 from fastapi import FastAPI
-
+from src.api.routes.generation_router import generation_router
 from src.api.routes.indexing_router import indexing_router
 from src.api.routes.retrieval_router import retrieval_router
 from src.indexing.embeddings import Embedding
 from src.indexing.vector_store import VectorStore
 from src.retrieval.reranker import RerankerModel
-from src.api.routes.generation_router import generation_router
+# from src.api.routes.generation_router import generation_router
 
 logger = logging.getLogger(__name__)
 

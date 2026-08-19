@@ -1,4 +1,5 @@
 import logging
+import hashlib
 from pathlib import Path
 from typing import Any
 from fastapi import APIRouter, File, HTTPException,Path as PathParam, Request, UploadFile, status
@@ -7,7 +8,6 @@ from src.helper.file_validation import validate_file
 from src.indexing import DocumentProcessor
 from src.helper.file_helper import FileHelper
 
-
 logger = logging.getLogger(__name__)
 
 indexing_router = APIRouter(
@@ -15,11 +15,13 @@ indexing_router = APIRouter(
     tags=["Documents"],
 )
 
-class UploadResponse(BaseModel):
+class UpdateResponse(BaseModel):
     message: str
 
-class UpdateResponse(BaseModel):
-    message: dict[str, Any]
+class UploadResponse(BaseModel):
+    file_name: str
+    file_id: str
+    file_hash_content: str
 
 @indexing_router.post(
     "/upload",
@@ -37,6 +39,10 @@ def upload_document(
         validate_file(file)
 
         temp_path = FileHelper.save_temp_file(file)
+        path = Path(temp_path)
+        file_name = path.name
+        file_id = hashlib.sha256(path.name.encode("utf-8")).hexdigest()
+        file_hash_content = hashlib.sha256(path.read_bytes()).hexdigest()
 
         
         message = DocumentProcessor().document_processing_pipeline(
@@ -44,7 +50,9 @@ def upload_document(
             vector_store=vector_store
         )
 
-        return UploadResponse(message=message)
+        return UploadResponse(file_name=file_name,
+                            file_id=file_id,
+                            file_hash_content=file_hash_content)
 
     except HTTPException:
         raise
