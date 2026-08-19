@@ -350,8 +350,8 @@ def run_retrieval_evaluation(
 
 if __name__ == '__main__' :
     summary = run_retrieval_evaluation(
-    test_dataset_path="evaluation/test_dataset/guideline_test_dataset_clean.json",
-    output_path="evaluation/test_dataset/retrieval_raw_results.json",
+    test_dataset_path="evaluation/test_dataset/malaria_test_data_clean.json",
+    output_path="evaluation/test_dataset/malaria_retrieval_raw_results.json",
     )
 
     print(summary)

@@ -1,0 +1,4939 @@
+[
+  {
+    "query_id": null,
+    "original_query": "When should an antimalarial medicine recommended in a national treatment policy be changed due to treatment failure?",
+    "normalized_query": "when to change recommended antimalarial medicine in national malaria treatment policy total treatment failure proportion threshold",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "percentage",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "An antimalarial medicine should be changed if the total treatment failure proportion is ≥ 10%, as assessed in vivo by monitoring therapeutic efficacy.",
+    "gold_claims": [
+      "An antimalarial medicine recommended in national policy should be changed if the total treatment failure proportion is ≥ 10% in vivo."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "e24237cf1dfd84bea71bad02dee492e2f4f889ac9e3f9445a1f04d85da400f0d",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 22,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What average cure rate in clinical trials is required to introduce a new antimalarial medicine into national treatment policy?",
+    "normalized_query": "average cure rate clinical trials required to introduce new antimalarial medicine national treatment policy",
+    "query_type": "numerical",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "percentage",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "An average cure rate of > 95% as assessed in clinical trials.",
+    "gold_claims": [
+      "Introducing a new antimalarial medicine into national treatment policy requires an average cure rate of > 95% in clinical trials."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "e24237cf1dfd84bea71bad02dee492e2f4f889ac9e3f9445a1f04d85da400f0d",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 22,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What formulation of paediatric antimalarial drugs is preferred for young children and infants?",
+    "normalized_query": "preferred paediatric antimalarial formulations for young children and infants solid vs liquid dispersible tablets",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Solid formulations (e.g. dispersible tablets) are preferred over liquid formulations.",
+    "gold_claims": [
+      "Solid paediatric formulations such as dispersible tablets are preferred over liquid formulations for young children and infants."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "9ab4fc96d712ee33c0da4f5a4c95900ad422dd720b1ecbc512512dd6f5fb5f24",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 23,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Is mass testing and treatment (MTaT) recommended to reduce malaria transmission?",
+    "normalized_query": "is mass testing and treatment MTaT recommended to reduce malaria transmission WHO guidance",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "diagnostic_test",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Mass testing and treatment (MTaT) to reduce the transmission of malaria is not recommended.",
+    "gold_claims": [
+      "Mass testing and treatment (MTaT) to reduce malaria transmission is not recommended."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "a4796d4253796fa72a9522c3eef97367a39ec29be4cc7362ff3cea4415571273",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 24,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Who can receive targeted drug administration (TDA) as chemoprevention in very low to low transmission settings?",
+    "normalized_query": "target population for targeted drug administration TDA chemoprevention low transmission settings",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "People with increased risk of infection relative to the general population.",
+    "gold_claims": [
+      "Targeted drug administration can be given to individuals with an increased risk of infection compared to the general population."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "015569906edd2da20ae9c567971ae8ac179f65978e65d43ab7cee51a2aa0689e",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 24,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Is routine malaria testing and treatment recommended for individuals arriving at points of entry?",
+    "normalized_query": "is routine malaria testing and treatment at points of entry land sea air recommended to reduce importation",
+    "query_type": "diagnostic_test",
+    "query_tags": [
+      "diagnostic_test",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Routine malaria testing and treatment of people arriving at points of entry (land, sea or air) to reduce importation is not recommended.",
+    "gold_claims": [
+      "Routine malaria testing and treatment at points of entry to reduce importation is not recommended."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "e9f4360c5f35399f5c438cd5e797a8afb306e5e2a1668d91fd7d8379cf9f2fea",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 25,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Who should be given antimalarial medicine as chemoprevention in reactive drug administration (RDA)?",
+    "normalized_query": "target population for reactive drug administration RDA chemoprevention confirmed malaria case contacts",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "All people residing with or near a confirmed malaria case and all people who share the same risk of infection (e.g. co-travellers and co-workers).",
+    "gold_claims": [
+      "Reactive drug administration is provided to individuals living with or near a confirmed case, as well as those sharing the same infection risk such as co-workers and co-travellers."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "dbc17e948968d15bb220174153e4889d4690df7f629fd33e173c16b19c488a6d",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 25,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Where should reactive indoor residual spraying (IRS) be conducted following a confirmed malaria case?",
+    "normalized_query": "where to conduct reactive indoor residual spraying IRS confirmed malaria cases houses neighbours",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "In the houses of confirmed cases and neighbours.",
+    "gold_claims": [
+      "Reactive indoor residual spraying of insecticide can be conducted in the houses of confirmed cases and their neighbours."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "162774bc682d7a775ec99f6b8dff3ba8e7bed857b49ba22663f92485ca99cf55",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 26,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What does the medical abbreviation AL stand for in the WHO malaria guidelines?",
+    "normalized_query": "medical abbreviation AL meaning artemether lumefantrine WHO malaria guidelines",
+    "query_type": "definition",
+    "query_tags": [
+      "abbreviation",
+      "medical_term",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "artemether-lumefantrine",
+    "gold_claims": [
+      "AL stands for artemether-lumefantrine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2a285ff43a8190ab707d769835fc87281e77ac76416e040bf6d3a201df257f34",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 27,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What does the abbreviation IPTp stand for?",
+    "normalized_query": "abbreviation IPTp full form intermittent preventive treatment in pregnancy",
+    "query_type": "definition",
+    "query_tags": [
+      "abbreviation",
+      "medical_term",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "intermittent preventive treatment in pregnancy",
+    "gold_claims": [
+      "IPTp stands for intermittent preventive treatment in pregnancy."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "5d0a31baba70f6244b9df7b3bb45017b964437515fd1a2d6fa9ddc173aa54366",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 28,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the full meaning of the abbreviation SMC in malaria interventions?",
+    "normalized_query": "abbreviation SMC meaning seasonal malaria chemoprevention",
+    "query_type": "definition",
+    "query_tags": [
+      "abbreviation",
+      "medical_term",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "seasonal malaria chemoprevention",
+    "gold_claims": [
+      "SMC stands for seasonal malaria chemoprevention."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "3c63e2dba2b0682fbef36814baedff6abbde9ecae88b7e626717ef330de5c2fc",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 29,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How many estimated global cases and deaths from malaria occurred in 2023 according to the World malaria report?",
+    "normalized_query": "estimated global malaria cases and deaths 2023 World malaria report",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "prevalence",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "An estimated 263 million cases and 597 000 malaria deaths globally in 2023.",
+    "gold_claims": [
+      "In 2023, there were an estimated 263 million cases and 597,000 deaths from malaria globally."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "a73214f10d70c985afa233aa00967ebaf6a6ebfa89a5b280e61e49b8fca29268",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 31,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the 2030 Global Technical Strategy target for reducing malaria mortality rates compared to 2015?",
+    "normalized_query": "Global Technical Strategy 2030 target percentage reduction malaria mortality rates compared to 2015",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "percentage",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "At least 90%",
+    "gold_claims": [
+      "The target for reducing global malaria mortality rates by 2030 compared with 2015 is at least 90%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1f67bafa5e18be649a00cf89db2980e65f4e36cf5e71406d7f0213b50dd22c6c",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 32,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How many countries is the Global Technical Strategy targeting for malaria elimination by 2025?",
+    "normalized_query": "GTS 2025 target number of countries to eliminate malaria transmitted in 2015",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "At least 20 countries",
+    "gold_claims": [
+      "The target for 2025 is to eliminate malaria from at least 20 countries in which malaria was transmitted in 2015."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1f67bafa5e18be649a00cf89db2980e65f4e36cf5e71406d7f0213b50dd22c6c",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 32,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which Plasmodium species commonly infect humans, and which is considered the most dangerous?",
+    "normalized_query": "Plasmodium species infecting humans P. falciparum P. vivax P. malariae P. ovale most dangerous species",
+    "query_type": "cause",
+    "query_tags": [
+      "medical_term",
+      "diagnosis",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The four species that most commonly infect humans are Plasmodium falciparum, P. vivax, P. malariae, and P. ovale. P. falciparum is the most dangerous.",
+    "gold_claims": [
+      "Plasmodium falciparum, P. vivax, P. malariae, and P. ovale most commonly infect humans.",
+      "Plasmodium falciparum is the most dangerous species."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "045293a99c7b11d89d31a221611038dae01631ab6b47973bed12e345bd7f768c",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 34,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How long does the malaria parasite typically take to develop inside a mosquito into an infective form for humans?",
+    "normalized_query": "development time period of malaria parasite inside mosquito to become infective to humans",
+    "query_type": "cause",
+    "query_tags": [
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "A period of 7–10 days.",
+    "gold_claims": [
+      "The malaria parasite generally requires 7 to 10 days to develop inside the mosquito into a form infective to humans."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "045293a99c7b11d89d31a221611038dae01631ab6b47973bed12e345bd7f768c",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 34,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What annual parasite incidence and P. falciparum prevalence define high malaria transmission areas?",
+    "normalized_query": "annual parasite incidence API and P falciparum prevalence rate definition for high transmission areas",
+    "query_type": "prevalence",
+    "query_tags": [
+      "prevalence",
+      "numerical",
+      "percentage",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "An annual parasite incidence of 450 or more cases per 1000 population and a P. falciparum prevalence rate of ≥35%.",
+    "gold_claims": [
+      "High transmission areas have an annual parasite incidence of ≥ 450 cases per 1000 population.",
+      "High transmission areas have a Plasmodium falciparum prevalence rate of ≥ 35%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "70ea4a0caa3aa963366e875d3c0bd411e8bc5c1f4bdd874309160d070fa2a588",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 34,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the annual parasite incidence range for areas categorized as having low malaria transmission?",
+    "normalized_query": "annual parasite incidence range API for low malaria transmission areas per 1000 population",
+    "query_type": "prevalence",
+    "query_tags": [
+      "prevalence",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "An annual parasite incidence of 100–250 cases per 1000 population.",
+    "gold_claims": [
+      "Low transmission areas have an annual parasite incidence of 100–250 cases per 1000 population."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "70ea4a0caa3aa963366e875d3c0bd411e8bc5c1f4bdd874309160d070fa2a588",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 34,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which two vector control interventions are recommended by WHO for large-scale deployment?",
+    "normalized_query": "malaria vector control interventions recommended for large scale deployment WHO guidelines",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Insecticide-treated nets (ITNs) prequalified by WHO and indoor residual spraying (IRS) with a product prequalified by WHO.",
+    "gold_claims": [
+      "WHO-prequalified ITNs and WHO-prequalified indoor residual spraying (IRS) are the vector control interventions recommended for large-scale deployment."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "3d51cdcbdad9765ccdfeff2203f479dd22faddad40e0671aa225edc767e14409",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 36,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Approximately how many Anopheles species are major vector species for malaria?",
+    "normalized_query": "number of Anopheles mosquito species that are major malaria vectors",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Around 40 species.",
+    "gold_claims": [
+      "Out of more than 400 Anopheles species, around 40 are major malaria vectors."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "5e3a21dac00dee9119b344c48268ef5929c36a16bf1d55bfce4f596f9e8f2647",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 36,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What factors attract female Anopheles mosquitoes to a human host?",
+    "normalized_query": "factors attracting female Anopheles mosquitoes to human host blood meal",
+    "query_type": "cause",
+    "query_tags": [
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Exhaled carbon dioxide, lactic acid, host odours, warmth, and moisture.",
+    "gold_claims": [
+      "Female mosquitoes are attracted to hosts by exhaled carbon dioxide, lactic acid, host odours, warmth, and moisture."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "5e3a21dac00dee9119b344c48268ef5929c36a16bf1d55bfce4f596f9e8f2647",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 36,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What percentage of clinical cases averted in Africa between 2000 and 2015 was attributed to ITNs?",
+    "normalized_query": "percentage of clinical malaria cases averted in Africa by ITNs between 2000 and 2015",
+    "query_type": "percentage",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "68% of cases averted.",
+    "gold_claims": [
+      "Insecticide-treated nets (ITNs) made the largest contribution by averting 68% of clinical malaria cases in Africa between 2000 and 2015."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "086231fb858b51cc936897330dc47ac16f5fa8fb5ab426b9087e26626921280a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 37,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What percentage of reporting malaria-endemic sites detected pyrethroid resistance in at least one vector species?",
+    "normalized_query": "percentage of global sites detecting pyrethroid resistance in malaria vectors",
+    "query_type": "percentage",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "68% of the sites for which data were available.",
+    "gold_claims": [
+      "Globally, resistance to pyrethroids was detected in at least one malaria vector in 68% of monitored sites."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "f480001419696e727601a4f2438ceadf50e9cc9418058fbe91ac95826f9b5b41",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 38,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Why should vector control programmes avoid switching between different pyrethroid insecticides to manage resistance?",
+    "normalized_query": "switching between pyrethroid insecticides to manage resistance effectiveness WHO guidance",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Differences between adult mosquito mortalities in pyrethroid resistance assays are not indicative of a true or operationally relevant difference in performance among commonly used pyrethroids.",
+    "gold_claims": [
+      "Differences in adult mosquito mortality assays do not reflect operationally relevant performance differences among commonly used pyrethroids."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "98448af35386ce0f85fdff5d68be13489c150b6094352a53bfbf3bb30c1a7174",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 38,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What are insecticide mixtures in vector control?",
+    "normalized_query": "definition of insecticide mixtures in malaria vector control",
+    "query_type": "definition",
+    "query_tags": [
+      "definition",
+      "treatment",
+      "medical_term"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Co-formulations that combine two or more insecticides with different modes of action.",
+    "gold_claims": [
+      "Mixtures are co-formulations combining two or more insecticides with different modes of action."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "fb57240adda31b3257fb39169aa3793fcfb706f2d16f0408237c75e175826c5a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 39,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How is residual malaria transmission defined?",
+    "normalized_query": "definition of residual malaria transmission WHO guidelines",
+    "query_type": "definition",
+    "query_tags": [
+      "definition",
+      "medical_term",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The persistence of malaria transmission following the implementation in time and space of a widely effective malaria programme.",
+    "gold_claims": [
+      "Residual transmission refers to ongoing malaria transmission that persists despite the wide implementation of an effective malaria programme."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "6ff12e5f67e3664a4a39bf3e25737056aed4fd71dba3a5fd1c6fc59a788b2529",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 40,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How should old insecticide-treated nets be disposed of according to WHO guidelines?",
+    "normalized_query": "WHO recommended disposal method for old insecticide treated nets ITNs",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Old nets should be buried, preferably in non-permeable soil and away from water sources, rather than burned in the open air.",
+    "gold_claims": [
+      "WHO recommends burying old nets in non-permeable soil away from water sources instead of open-air burning."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "da1cbc3755a2f626183019acd56cef6844b934b729927c93b5b8caa3a124dd46",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 44,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By what rate ratio do ITNs reduce all-cause child mortality compared to no nets?",
+    "normalized_query": "rate ratio reduction all cause child mortality ITNs vs no nets",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Rate ratio of 0.83 (95% CI: 0.77–0.89).",
+    "gold_claims": [
+      "ITNs reduce all-cause child mortality with a rate ratio of 0.83 compared to no nets."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "da1cbc3755a2f626183019acd56cef6844b934b729927c93b5b8caa3a124dd46",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 44,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How does piperonyl butoxide (PBO) work in pyrethroid-PBO nets to enhance efficacy against resistant mosquitoes?",
+    "normalized_query": "mechanism of action piperonyl butoxide PBO in pyrethroid PBO ITNs oxidase inhibition",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "PBO acts by inhibiting certain metabolic enzymes, primarily oxidases, within the mosquito that would otherwise detoxify or sequester pyrethroid insecticides.",
+    "gold_claims": [
+      "Piperonyl butoxide (PBO) inhibits metabolic enzymes, primarily oxidases, preventing mosquitoes from detoxifying pyrethroids."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "d940eea7a39a4b2c5b722b51ba1c4018eee447f09de41dd34d1a1d43aa5e9aaf",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 49,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What type of recommendation has WHO issued for deploying pyrethroid-chlorfenapyr ITNs instead of pyrethroid-only LLINs in areas with pyrethroid resistance?",
+    "normalized_query": "WHO recommendation type pyrethroid chlorfenapyr ITNs vs pyrethroid only LLINs pyrethroid resistance",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Strong recommendation for, Moderate certainty evidence.",
+    "gold_claims": [
+      "WHO provides a strong recommendation for deploying pyrethroid-chlorfenapyr ITNs instead of pyrethroid-only LLINs in pyrethroid-resistant areas based on moderate certainty evidence."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "887cd2eebfc3c76ab69f9cd91017874fad1cf892596744e8e9f7dc40faf7126e",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 50,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What proportion of pyrethroid-chlorfenapyr ITNs were reported as torn two years after deployment in trial data from Tanzania?",
+    "normalized_query": "proportion percentage torn pyrethroid chlorfenapyr ITNs two years post deployment Tanzania study",
+    "query_type": "percentage",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "34% of pyrethroid-chlorfenapyr ITNs.",
+    "gold_claims": [
+      "34% of pyrethroid-chlorfenapyr ITNs were torn (hole area ≥ 790 cm²) two years after deployment in the trial."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "fd55d6a379c7aa3277532e7e9a4f9d9748f9af0750404b0f12a8b92bce2c3937",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 51,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How does chlorfenapyr exert its insecticidal effect on mosquitoes?",
+    "normalized_query": "mechanism of action chlorfenapyr pyrrole insecticide mosquito mitochondria ATP production disruption",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Chlorfenapyr disrupts adenosine 5'-triphosphate (ATP) production in the mosquito's mitochondria, reducing energy production and causing cell dysfunction and death.",
+    "gold_claims": [
+      "Chlorfenapyr disrupts ATP production in mosquito mitochondria, leading to cell dysfunction and death."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "134ebe881d7f9db6955a168557171cd99e149370c024db45dff1633e10430523",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 53,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By what percentage was clinical malaria incidence reduced two years after deploying pyrethroid-chlorfenapyr ITNs compared to pyrethroid-only LLINs?",
+    "normalized_query": "percentage reduction clinical malaria incidence two years post deployment pyrethroid chlorfenapyr ITNs vs pyrethroid only LLINs",
+    "query_type": "percentage",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Reduced by 40%.",
+    "gold_claims": [
+      "Clinical malaria incidence was reduced by approximately 40% two years post-deployment of pyrethroid-chlorfenapyr ITNs compared to pyrethroid-only LLINs."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "46770597fc1a3faab3d1c38f279e4239379d4c3cbcb4bebc3c036117813571e9",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 53,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Is pyrethroid-pyriproxyfen ITN recommended over pyrethroid-PBO ITN for malaria prevention in pyrethroid-resistant areas?",
+    "normalized_query": "is pyrethroid pyriproxyfen ITN recommended over pyrethroid PBO ITN pyrethroid resistance WHO recommendation",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Pyrethroid-pyriproxyfen ITNs are not recommended for deployment over pyrethroid-PBO ITNs.",
+    "gold_claims": [
+      "Pyrethroid-pyriproxyfen ITNs are conditionally recommended against deployment over pyrethroid-PBO ITNs in pyrethroid-resistant areas."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "9e8c1aca5e0cc4f668a4830a65849c4111dda068f25413da81403dfec30e2979",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 54,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What average willingness-to-pay for spatial emanators was reported in Cambodian studies?",
+    "normalized_query": "average willingness to pay per unit spatial emanators Cambodia studies cost",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "US$ 0.30 per unit.",
+    "gold_claims": [
+      "The average willingness-to-pay for spatial emanators reported in Cambodian studies was US$ 0.30 per unit."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c68334e9f7b3ea3a8cf036e8450b6e686ccf7d9badfd499ce6ed68eb2c1666b0",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 90,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What percentage of study participants in China reported consistent use of mosquito coils?",
+    "normalized_query": "percentage participants in China consistently using mosquito coils spatial emanator compliance",
+    "query_type": "percentage",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Over 94% of participants.",
+    "gold_claims": [
+      "Over 94% of participants in a study conducted in China consistently used mosquito coils."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "8a0ca7ff0c01fa12c74a51d283f8e0c7270e267f5bd09a12e04963b4bf9fe320",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 91,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Is space spraying recommended for the prevention and control of malaria in areas with ongoing transmission?",
+    "normalized_query": "is space spraying recommended for malaria prevention and control WHO guidelines",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Space spraying is not recommended for the prevention and control of malaria in children and adults in areas with ongoing malaria transmission; IRS or ITNs should be prioritized instead.",
+    "gold_claims": [
+      "Space spraying is conditionally recommended against for malaria prevention in areas with ongoing transmission."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "f59b34e97c3ec5d35deba9b912d7e0647ed9ff605e45aaa063ac07c2776a825a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 94,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By what rate ratio does house screening reduce clinical malaria incidence caused by P. falciparum in trial evidence?",
+    "normalized_query": "rate ratio reduction clinical P falciparum malaria incidence house screening cRCT trial",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Rate ratio: 0.38 (95% CI: 0.18–0.82).",
+    "gold_claims": [
+      "House screening reduces clinical P. falciparum malaria incidence with a rate ratio of 0.38."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c730232372b3d6c692203f88782955a96a79a8e379263158ee3d367c4b2fe7e7",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 95,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What additional animals were reported to have reduced entry into houses following screening in the Gambian study?",
+    "normalized_query": "animals reduced entry into houses following screening Gambia study pest reduction",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "study",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Bats, cockroaches, earwigs, geckos, mice, rats, snakes, and toads.",
+    "gold_claims": [
+      "In the Gambian study, house screening reduced entry of bats, cockroaches, earwigs, geckos, mice, rats, snakes, and toads."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "b0f2ce32018ed9e1c5227e62ed64ada2d3a3b124164cd97c93ccf7a77fc4081a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 97,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How are causal prophylaxis and suppressive prophylaxis distinguished for malaria prevention in travellers?",
+    "normalized_query": "difference between causal prophylaxis and suppressive prophylaxis malaria travel medicine",
+    "query_type": "definition",
+    "query_tags": [
+      "definition",
+      "medication",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Causal prophylaxis uses drugs that inhibit liver-stage (pre-erythrocytic) development, whereas suppressive prophylaxis uses drugs that kill asexual blood stages.",
+    "gold_claims": [
+      "Causal prophylaxis inhibits liver-stage development, while suppressive prophylaxis kills asexual blood-stage parasites."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c8cee3a2fd96640d851fcff26e8e9f3279b333e0907cfda51e7f78581e56a440",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 103,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "When should intermittent preventive treatment of malaria in pregnancy (IPTp-SP) be initiated?",
+    "normalized_query": "when to start IPTp SP intermittent preventive treatment in pregnancy gestational age second trimester",
+    "query_type": "dosage",
+    "query_tags": [
+      "dosage",
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "IPTp-SP should start as early as possible in the second trimester and not before week 13 of pregnancy.",
+    "gold_claims": [
+      "IPTp-SP administration should begin in the second trimester, starting as early as possible after 13 weeks of pregnancy."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "247e8a6f79e31a8c4626a92eb92f06e8d495ce5d1c38bd80218430e3302fdff3",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 103,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended dosage and tablet composition for IPTp-SP administered as directly observed therapy?",
+    "normalized_query": "IPTp SP dose number of tablets sulfadoxine pyrimethamine directly observed therapy DOT",
+    "query_type": "dosage",
+    "query_tags": [
+      "dosage",
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Three tablets of SP (each containing 500 mg/25 mg SP), for a total dosage of 1500 mg/75 mg SP.",
+    "gold_claims": [
+      "IPTp-SP is given as three tablets containing 500 mg/25 mg SP each, totaling 1500 mg/75 mg SP."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "08658eca0597cb7db9c76137d5e5717e4d3d3425c6e86e67de93684d27f11c08",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 104,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Why should IPTp-SP not be administered before week 13 of pregnancy?",
+    "normalized_query": "contraindication IPTp SP before week 13 pregnancy fetal malformation risk",
+    "query_type": "contraindication",
+    "query_tags": [
+      "contraindication",
+      "medication",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Due to an increased risk of fetal malformation.",
+    "gold_claims": [
+      "IPTp-SP is contraindicated prior to week 13 of pregnancy because of the risk of fetal malformation."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "08658eca0597cb7db9c76137d5e5717e4d3d3425c6e86e67de93684d27f11c08",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 104,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Why should high doses of folic acid be avoided during IPTp-SP administration?",
+    "normalized_query": "folic acid daily dose interaction with IPTp SP efficacy reduced",
+    "query_type": "contraindication",
+    "query_tags": [
+      "contraindication",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "High doses of folic acid (daily dose ≥ 5 mg) counteract the antimalarial efficacy of SP.",
+    "gold_claims": [
+      "Daily doses of folic acid of 5 mg or more counteract the antimalarial efficacy of SP."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "674fa640e4d3bf5d90e1e15bb7494de8a537cdf70b175dc1bae87897a6528266",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 104,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By how much does IPTp-SP increase mean birthweight in babies born to women of all gravidae?",
+    "normalized_query": "mean birthweight increase IPTp SP vs no IPTp SP meta analysis grams",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "clinical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Mean difference of 57 g higher (95% CI: 44–69 g).",
+    "gold_claims": [
+      "IPTp-SP increases mean birthweight by an average of 57 grams across all gravidae compared to no IPTp-SP."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "241423713e3baaec15bb657b9ba6ffe61cce99018a0af46b994df2b14a1cb3be",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 105,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What threshold of parasite prevalence or annual parasite incidence defines moderate to high perennial malaria transmission settings for PMC?",
+    "normalized_query": "parasite prevalence and annual parasite incidence API thresholds for perennial malaria chemoprevention PMC",
+    "query_type": "prevalence",
+    "query_tags": [
+      "prevalence",
+      "numerical",
+      "percentage",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "P. falciparum parasite prevalence greater than 10% or an annual parasite incidence greater than 250 per 1000.",
+    "gold_claims": [
+      "Moderate to high perennial transmission settings are defined as having P. falciparum parasite prevalence > 10% or API > 250 per 1000 population."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "5eb95ec41fa9f38f49cf8ee9224ff2e7a942cabb77384cf4d2a35a7ae88bb28b",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 109,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What minimum interval should be maintained between doses of sulfadoxine-pyrimethamine in PMC schedules?",
+    "normalized_query": "minimum interval between SP doses perennial malaria chemoprevention PMC schedule",
+    "query_type": "dosage",
+    "query_tags": [
+      "dosage",
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "SP doses should be given at least one month apart.",
+    "gold_claims": [
+      "Doses of SP in perennial malaria chemoprevention must be administered at least one month apart."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "f22c36599f120025db6d52c675e2ebb268ba4e6749b183854eb97040c2ba4214",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 110,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What drug combination is widely recommended and used for seasonal malaria chemoprevention (SMC) in African children?",
+    "normalized_query": "recommended drug combination for seasonal malaria chemoprevention SMC African children",
+    "query_type": "medication",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Sulfadoxine-pyrimethamine plus amodiaquine (SP+AQ).",
+    "gold_claims": [
+      "Sulfadoxine-pyrimethamine plus amodiaquine (SP+AQ) is the drug combination widely used for SMC."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1525dba7422bd3f5a2e3e7451caaf374be852a20bf54ba523618cec02d039389",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 114,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By what proportion does SMC reduce the risk of clinical malaria in children under 5 years during the transmission season?",
+    "normalized_query": "risk ratio reduction clinical malaria children under 5 years seasonal malaria chemoprevention SMC",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Reduces the risk by almost three quarters (risk ratio: 0.27; 95% CI: 0.25–0.29).",
+    "gold_claims": [
+      "SMC reduces clinical malaria risk in children < 5 years by almost 75% (risk ratio 0.27)."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "86f81f689f99824306aebf36bfb71f8f3b0aae28d5782d2d5cac5c91cc0f8bcf",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 114,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How did door-to-door delivery compare to fixed-point delivery for SMC coverage in Mali?",
+    "normalized_query": "coverage comparison door to door vs fixed point delivery seasonal malaria chemoprevention SMC Mali",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Door-to-door delivery achieved significantly higher coverage than fixed-point delivery (76.1% versus 62.2%, p = 0.0028).",
+    "gold_claims": [
+      "In Mali, door-to-door SMC delivery achieved 76.1% coverage compared to 62.2% for fixed-point delivery."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c46d5e9f5f8671d10588d961134fa0056b3113d8b5f6cd22fdd006d8f1568c53",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 114,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What target age group has been evaluated in studies of intermittent preventive treatment of malaria in school-aged children (IPTsc)?",
+    "normalized_query": "age group range for intermittent preventive treatment of malaria in school aged children IPTsc",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Children aged 5–15 years.",
+    "gold_claims": [
+      "IPTsc has been evaluated in school-aged children between 5 and 15 years of age."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0c8c1e2d0d7402b786dff2bb2109694bbaf8a70b68211ac37ebcb64d212c00f2",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 118,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What precautions should be taken before administering IPTsc antimalarials to older girls of reproductive age?",
+    "normalized_query": "precaution for girls of reproductive age IPTsc pregnancy status confirmation",
+    "query_type": "contraindication",
+    "query_tags": [
+      "contraindication",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Pregnancy status must be confirmed before giving certain antimalarials for chemoprevention because of insufficient safety, efficacy, and pharmacokinetic data in pregnancy.",
+    "gold_claims": [
+      "Girls of reproductive age must not be given certain IPTsc antimalarials without first confirming that they are not pregnant."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "eb8bfd0d0f7f50cdb47f59134fc57506e8955f61a60b507473c7513c1f6e8068",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 119,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How is post-discharge malaria chemoprevention (PDMC) defined?",
+    "normalized_query": "definition post discharge malaria chemoprevention PDMC children severe anaemia",
+    "query_type": "definition",
+    "query_tags": [
+      "definition",
+      "medical_term",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The administration of a full antimalarial treatment course at regular intervals to children admitted with severe anaemia to prevent new malaria infections during the period after hospital discharge.",
+    "gold_claims": [
+      "PDMC is the administration of full antimalarial treatment courses at regular intervals after hospital discharge to children admitted with severe anaemia."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2e765828dbb34d3fbcd1cd96f075fe12fdad5424ccaf641152b7f1f959b9c9f8",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 123,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How did community-based delivery compare to facility-based delivery for adherence to PDMC?",
+    "normalized_query": "adherence rates community based vs facility based delivery post discharge malaria chemoprevention PDMC",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Community-based delivery was associated with increased adherence compared to facility-based delivery (70.6% vs. 52.0%, p = 0.006).",
+    "gold_claims": [
+      "Community-based delivery of PDMC achieved 70.6% adherence compared to 52.0% for facility-based delivery."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "71e5df6f2c7a6cc15a747b0862d01e6d923cb4a66d53795912a6f4db7510e6b8",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 124,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By how much does PDMC reduce all-cause mortality during the intervention period in hospitalized children?",
+    "normalized_query": "risk ratio reduction all cause mortality intervention period post discharge malaria chemoprevention PDMC",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Risk ratio: 0.23 (95% CI: 0.08–0.70; high-certainty evidence).",
+    "gold_claims": [
+      "PDMC reduces all-cause mortality during the intervention period with a risk ratio of 0.23."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "94b53abd5d79502e94bf150a074258ab2ffa12f47f0c7985f410da886f165edc",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 125,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What increase in QTc interval was associated with dihydroartemisinin-piperaquine (DHAP) administration during PDMC?",
+    "normalized_query": "QTc interval prolongation milliseconds DHAP dihydroartemisinin piperaquine PDMC third dose",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "adverse_effect",
+      "medication",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "An 18.6 ms (95% CI: 15.6–21.8) increase of the QTc interval (Fridericia correction) after the third dose of each course.",
+    "gold_claims": [
+      "DHAP was associated with an 18.6 ms mean increase in QTc interval following the third dose of each course."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "86d08563de0c5f0a26746e4a19b70415270a092a6e783eef0f06ab9e2e10a98a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 125,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is mass drug administration (MDA) for malaria?",
+    "normalized_query": "definition mass drug administration MDA malaria population treatment",
+    "query_type": "definition",
+    "query_tags": [
+      "definition",
+      "medical_term",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The administration of a full therapeutic course of an antimalarial medicine at approximately the same time, and often at repeated intervals, to all age groups of a population in a defined geographical area without prior malaria testing.",
+    "gold_claims": [
+      "MDA is the administration of full antimalarial therapeutic courses to all age groups in a defined population without prior testing."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "b6d25b2f9fb2d13113659bc9ef9026ede9a8ed12b70dcc2cb2c98ec0a8348780",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 128,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What risk is associated with administering 8-aminoquinoline drugs during MDA for P. vivax in G6PD-deficient individuals?",
+    "normalized_query": "8 aminoquinoline severe adverse effect G6PD deficiency haemolysis risk P vivax MDA",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "adverse_effect",
+      "medication",
+      "contraindication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "An 8-aminoquinoline medicine has the potential to cause severe haemolysis in persons deficient for the glucose-6-phosphate dehydrogenase (G6PD) enzyme.",
+    "gold_claims": [
+      "8-aminoquinolines can cause severe haemolysis in G6PD-deficient individuals."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "59900420c71bf5ffdfa2ff192079a0e8373684ff8156c80f16de962223890b44",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 129,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is mass relapse prevention (MRP) for P. vivax malaria?",
+    "normalized_query": "definition mass relapse prevention MRP P vivax 8 aminoquinoline hypnozoites",
+    "query_type": "definition",
+    "query_tags": [
+      "definition",
+      "medical_term",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "A chemoprevention strategy in which the entire population of a delimited geographical area is provided only with an 8-aminoquinoline drug (without prior diagnostic testing) to treat hypnozoites and prevent relapses.",
+    "gold_claims": [
+      "Mass relapse prevention (MRP) provides an 8-aminoquinoline drug to an entire population to clear P. vivax hypnozoites."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "59900420c71bf5ffdfa2ff192079a0e8373684ff8156c80f16de962223890b44",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 129,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How long does the clinical incidence reduction effect of MDA typically last in moderate to high P. falciparum transmission settings?",
+    "normalized_query": "duration of effect MDA clinical malaria incidence reduction moderate high transmission",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The effect wanes within 1–3 months.",
+    "gold_claims": [
+      "The clinical incidence reduction from MDA in moderate to high transmission settings wanes within 1 to 3 months."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "b5c4f34e3dfa50145f7b68c5b299243d5e5b33adbd1d567cb27b175166a9b731",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 130,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Who should be excluded from receiving mass drug administration (MDA) antimalarial regimens?",
+    "normalized_query": "contraindications and exclusion criteria for mass drug administration MDA antimalarials",
+    "query_type": "contraindication",
+    "query_tags": [
+      "contraindication",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Pregnant women in their first trimester; infants <6 months of age or weighing <5kg; people recently treated with the same medicine; people with a known allergy to the medicine; anyone with severe acute illness or unable to take oral medication; people taking medicine known to interact; and people with specific drug contraindications.",
+    "gold_claims": [
+      "Exclusions for MDA include first-trimester pregnant women, infants under 6 months or under 5 kg, individuals recently treated with the same drug, allergic individuals, and severely ill persons."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "5348dc4423bd1c36cb168ffe655402db83cda38d7f3030a5f9dfb398a965e1a4",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 131,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What was the estimated cost per malaria case averted reported for MDA in emergency settings?",
+    "normalized_query": "cost per malaria case averted MDA mass drug administration emergency settings",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "US$ 46 per malaria case averted.",
+    "gold_claims": [
+      "One study estimated that MDA in an emergency setting cost US$ 46 per malaria case averted."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "8305f8a2a01bbf0b04b3660addaa9ddf7ac63580bf4d43e93dd970f2640fdc16",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 136,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By what risk difference does MDA reduce P. falciparum prevalence 1–3 months post-MDA in low transmission settings?",
+    "normalized_query": "risk difference reduction P falciparum prevalence 1 3 months post MDA low transmission cRCT",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "prevalence",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Risk difference: -18 cases per 1000 persons (95% CI: -20 to -14 per 1000 persons).",
+    "gold_claims": [
+      "MDA reduces P. falciparum prevalence by a risk difference of -18 cases per 1000 persons at 1–3 months post-MDA in low transmission areas."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "f3dfabc4152ff6dd058a61db3a7ad6d69e2061c3a9a6776369697cc641779527",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 139,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What rate of serious adverse events per 1000 doses was observed among participants in MDA trials?",
+    "normalized_query": "serious adverse event rate per 1000 doses antimalarial mass drug administration MDA",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "adverse_effect",
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "0.03 per 1000 doses of antimalarial medicine.",
+    "gold_claims": [
+      "The rate of serious adverse events among MDA participants was 0.03 per 1000 antimalarial doses."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "f00b4d0a9bded2f3fe45b49d64236b904f915b2963b2f16a1b61bf4e40ae6613",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 139,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How did the cost per person reached for MDA compare between operational and research settings?",
+    "normalized_query": "cost per person reached MDA operational vs research setting comparison",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "US$ 2.90 in an operational setting versus US$ 4.71 in a research setting.",
+    "gold_claims": [
+      "The cost of MDA per person reached was US$ 2.90 in operational settings compared to US$ 4.71 in research settings."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "fd154d68dc9135c3282797228039c93bd28c2fa575eff4afa58764ea96b4072f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 141,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "query_id": null,
+    "original_query": "What percentage of patients with acute vivax malaria in Thailand also have P. falciparum infections?",
+    "normalized_query": "percentage of patients with acute vivax malaria in Thailand also have P. falciparum infections",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "diagnosis",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "8% of patients with acute vivax malaria in Thailand also have P. falciparum infections.",
+    "gold_claims": [
+      "8% of patients with acute vivax malaria in Thailand also have P. falciparum infections."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "979c4a74353d46519bd30a5c64efa09102c7b0f592e3b067bd2a8439910fccb1",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the total dose of oral chloroquine recommended for chloroquine-sensitive vivax malaria?",
+    "normalized_query": "total dose of oral chloroquine for chloroquine-sensitive vivax malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The total dose of oral chloroquine for chloroquine-sensitive vivax malaria is 25 mg base/kg body weight.",
+    "gold_claims": [
+      "The total dose of oral chloroquine for chloroquine-sensitive vivax malaria is 25 mg base/kg body weight."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "a3c94bec9027289d5a9af6eee66eb0865c90203937d817957768a83348934371",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How is chloroquine dosed on the second day for chloroquine-sensitive vivax malaria?",
+    "normalized_query": "chloroquine dosing second day for chloroquine-sensitive vivax malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Chloroquine is given at 10 mg/kg body weight on the second day.",
+    "gold_claims": [
+      "Chloroquine is given at 10 mg/kg body weight on the second day."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "a3c94bec9027289d5a9af6eee66eb0865c90203937d817957768a83348934371",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which ACTs are recommended for chloroquine-resistant P. vivax malaria?",
+    "normalized_query": "ACTs recommended for chloroquine-resistant P. vivax malaria",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "ACTs containing piperaquine, mefloquine or lumefantrine are recommended for chloroquine-resistant P. vivax malaria.",
+    "gold_claims": [
+      "ACTs containing piperaquine, mefloquine or lumefantrine are recommended for chloroquine-resistant P. vivax malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "67bf9b4ef540390f7fa2133569c191f1f2f0c53199ed5ac7fe4d5281493a1df6",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the risk ratio for recurrent parasitaemia with ACTs compared to chloroquine for P. vivax malaria?",
+    "normalized_query": "risk ratio for recurrent parasitaemia ACTs compared to chloroquine P. vivax malaria",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The risk ratio for recurrent parasitaemia with ACTs compared to chloroquine for P. vivax malaria is 0.58 (95% CI, 0.18-1.90).",
+    "gold_claims": [
+      "ACTs were at least as effective in preventing recurrent parasitaemia before day 28 with a risk ratio of 0.58 (95% CI, 0.18-1.90)."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "5ebed49fdca288af18dc0faf69cfc11a679175c0a277396dce3c86754f3bf8ae",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 193,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What G6PD activity threshold defines deficiency in qualitative near-patient tests?",
+    "normalized_query": "G6PD activity threshold defines deficiency qualitative near-patient tests",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "In males and females, <30% of normal G6PD activity is considered deficient in qualitative near-patient tests.",
+    "gold_claims": [
+      "In males and females, <30% of normal G6PD activity is considered deficient."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "f67336f4ae07b10806fd475754ed05619f72761513df7d7f7b41e3e2769e27df",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 195,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the pooled sensitivity of qualitative near-patient G6PD tests?",
+    "normalized_query": "pooled sensitivity of qualitative near-patient G6PD tests",
+    "query_type": "numerical",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The pooled sensitivity of qualitative near-patient G6PD tests is 94.9% (95% CI 89.4, 97.6).",
+    "gold_claims": [
+      "The pooled sensitivity of qualitative near-patient G6PD tests is 94.9% (95% CI 89.4, 97.6)."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0aed3cb9e790df9adc0063fbc2c0c4420c8a6e0f1ef81cd08916ca68bc615863",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 196,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the pooled specificity of qualitative near-patient G6PD tests?",
+    "normalized_query": "pooled specificity of qualitative near-patient G6PD tests",
+    "query_type": "numerical",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The pooled specificity of qualitative near-patient G6PD tests is 96.2% (95% CI 93.5, 97.8).",
+    "gold_claims": [
+      "The pooled specificity of qualitative near-patient G6PD tests is 96.2% (95% CI 93.5, 97.8)."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0aed3cb9e790df9adc0063fbc2c0c4420c8a6e0f1ef81cd08916ca68bc615863",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 196,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended weekly primaquine dose for G6PD deficient patients?",
+    "normalized_query": "recommended weekly primaquine dose for G6PD deficient patients",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "For G6PD deficient patients, the recommended primaquine dose is 0.75 mg/kg once a week for 8 weeks.",
+    "gold_claims": [
+      "G6PD deficient patients should receive primaquine 0.75 mg/kg once a week for 8 weeks."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "11fd2886cab99b19f2514753a4503a983f24eea9345d8735d2f2e88f8fd35627",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 199,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the dose of primaquine for patients with G6PD activity between 30 and 70%?",
+    "normalized_query": "primaquine dose for patients with G6PD activity between 30 and 70 percent",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "For patients with G6PD activity between 30 and 70%, primaquine should be used at a regimen of 0.5 mg/kg/day for 14 days or 7 days, with precautions.",
+    "gold_claims": [
+      "Patients with intermediate G6PD deficiency between 30 and 70% should receive primaquine 0.5 mg/kg/day for 14 days or 7 days."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "11fd2886cab99b19f2514753a4503a983f24eea9345d8735d2f2e88f8fd35627",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 199,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the sensitivity of the STANDARD G6PD test at the 70% threshold?",
+    "normalized_query": "sensitivity of STANDARD G6PD test at 70 percent threshold",
+    "query_type": "numerical",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The sensitivity of the STANDARD G6PD test at the 70% threshold is 91.4% (95% CI 75.5, 97.4).",
+    "gold_claims": [
+      "The STANDARD G6PD test has a sensitivity of 91.4% (95% CI 75.5, 97.4) at the 70% threshold."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "be17ac196bf4c361caf8af9fc12bdfac0e4e25ae80edf560e539795a516f65a2",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 199,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the total dose of tafenoquine recommended for adults weighing more than 35 kg?",
+    "normalized_query": "total dose of tafenoquine for adults weighing more than 35 kg",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "For adults weighing more than 35 kg, the recommended tafenoquine dose is a single 300 mg dose (two 150 mg tablets).",
+    "gold_claims": [
+      "Adults and adolescents weighing more than 35 kg should receive a single 300 mg dose of tafenoquine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2c74eb15bd6226ba9d4c2284c3b29be83917758c4f26bb5a613a22f320ae3dd3",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 203,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended total primaquine dose for preventing relapse of P. vivax or P. ovale malaria?",
+    "normalized_query": "recommended total primaquine dose for preventing relapse P. vivax P. ovale malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The recommended total primaquine dose for preventing relapse is 7 mg/kg, given as 0.5 mg/kg/day for 14 days or 1 mg/kg/day for 7 days.",
+    "gold_claims": [
+      "The total primaquine dose for preventing relapse is 7 mg/kg."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "04974c6cffba55351255a2f723baf7049cfcb7fc2bed8f4fb53d384af58eddba",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 205,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which patient groups are excluded from primaquine treatment?",
+    "normalized_query": "patient groups excluded from primaquine treatment",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "contraindication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Primaquine is contraindicated in pregnant women, infants aged <1 month, and women breastfeeding infants aged <1 month.",
+    "gold_claims": [
+      "Primaquine should not be given to pregnant women.",
+      "Primaquine should not be given to infants aged <1 month.",
+      "Primaquine should not be given to women breastfeeding infants aged <1 month."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "04974c6cffba55351255a2f723baf7049cfcb7fc2bed8f4fb53d384af58eddba",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 205,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the mortality rate of untreated severe malaria?",
+    "normalized_query": "mortality rate of untreated severe malaria",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Mortality from untreated severe malaria approaches 100%.",
+    "gold_claims": [
+      "Mortality from untreated severe malaria approaches 100%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "20f94f701565963a6a2519a7b7843f0f7a899dc426bc714443a9b23aee27957f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the mortality rate for severe malaria with prompt effective treatment?",
+    "normalized_query": "mortality rate for severe malaria with prompt effective treatment",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "With prompt, effective antimalarial treatment and supportive care, the mortality rate for severe malaria falls to 10-20%.",
+    "gold_claims": [
+      "With prompt, effective treatment, the mortality rate for severe malaria falls to 10-20%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "20f94f701565963a6a2519a7b7843f0f7a899dc426bc714443a9b23aee27957f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What defines impaired consciousness in severe falciparum malaria in adults?",
+    "normalized_query": "definition impaired consciousness severe falciparum malaria adults",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Impaired consciousness in severe falciparum malaria in adults is defined as a Glasgow coma score < 11.",
+    "gold_claims": [
+      "Impaired consciousness in severe falciparum malaria in adults is a Glasgow coma score < 11."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "20f94f701565963a6a2519a7b7843f0f7a899dc426bc714443a9b23aee27957f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What glucose level defines hypoglycemia in severe malaria?",
+    "normalized_query": "glucose level defines hypoglycemia in severe malaria",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Hypoglycaemia in severe malaria is defined as blood or plasma glucose < 2.2 mmol/L (< 40 mg/dL).",
+    "gold_claims": [
+      "Hypoglycaemia in severe malaria is defined as blood or plasma glucose < 2.2 mmol/L."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ece1100d5c8d41d685e6ba9ecd86e2e01b5208129724e709ee0cdd4bf12a8d54",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the threshold for severe malarial anaemia in children under 12 years?",
+    "normalized_query": "threshold for severe malarial anaemia in children under 12 years",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Severe malarial anaemia in children under 12 years is defined as a haemoglobin concentration ≤ 5 g/dL or a haematocrit of ≤ 15%.",
+    "gold_claims": [
+      "Severe malarial anaemia in children under 12 years is defined as haemoglobin ≤ 5 g/dL or haematocrit ≤ 15%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ece1100d5c8d41d685e6ba9ecd86e2e01b5208129724e709ee0cdd4bf12a8d54",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended parenteral antimalarial treatment for severe malaria?",
+    "normalized_query": "recommended parenteral antimalarial treatment for severe malaria",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Parenteral artesunate is the treatment of choice for all severe malaria.",
+    "gold_claims": [
+      "Parenteral artesunate is the treatment of choice for all severe malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2ad030458ce8135776e87a1b740a96788ab5113a326c31d943828b0c20e5056a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 211,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended duration of parenteral antimalarial treatment for severe malaria?",
+    "normalized_query": "duration of parenteral antimalarial treatment for severe malaria",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Parenteral antimalarial drugs should be given for a minimum of 24 hours once started or until the patient can tolerate oral medication.",
+    "gold_claims": [
+      "Parenteral antimalarial treatment should be given for at least 24 hours."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "d926a0fbcff50f40afc56cb8c35c649ac5344f7789e276de7d83ec5946db4b35",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 211,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the initial dose of intramuscular artemether for severe malaria?",
+    "normalized_query": "initial dose of intramuscular artemether for severe malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The initial dose of artemether for severe malaria is 3.2 mg/kg body weight intramuscularly.",
+    "gold_claims": [
+      "The initial dose of artemether is 3.2 mg/kg intramuscularly."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c6c6c44ff841aade824d18a389762ac0d89812efe07e524dd5237178450c9a85",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 217,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the maintenance dose of intramuscular artemether for severe malaria?",
+    "normalized_query": "maintenance dose of intramuscular artemether for severe malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The maintenance dose of artemether for severe malaria is 1.6 mg/kg body weight intramuscularly daily.",
+    "gold_claims": [
+      "The maintenance dose of artemether is 1.6 mg/kg daily."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c6c6c44ff841aade824d18a389762ac0d89812efe07e524dd5237178450c9a85",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 217,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which antimalarial drugs are not recommended as adjunctive treatments for severe malaria?",
+    "normalized_query": "antimalarial drugs not recommended as adjunctive treatments for severe malaria",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Heparin, prostacyclin, desferroxamine, pentoxifylline, low-molecular-mass dextran, urea, high-dose corticosteroids, aspirin, anti-TNF antibody, cyclosporine A, dichloroacetate, adrenaline, hyperimmune serum, N-acetylcysteine, and bolus administration of albumin are not recommended.",
+    "gold_claims": [
+      "Heparin, prostacyclin, desferroxamine, pentoxifylline, low-molecular-mass dextran, urea, high-dose corticosteroids, aspirin, anti-TNF antibody, cyclosporine A, dichloroacetate, adrenaline, hyperimmune serum, N-acetylcysteine, and albumin bolus are not recommended for severe malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "806a062ef46af11f5ba40186a9c87f189e260b97299815ab1d64712322b9fcf0",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 214,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended parenteral antimalarial for pregnant women with severe malaria?",
+    "normalized_query": "recommended parenteral antimalarial for pregnant women with severe malaria",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Parenteral artesunate is the treatment of choice for pregnant women with severe malaria in all trimesters.",
+    "gold_claims": [
+      "Parenteral artesunate is the treatment of choice for pregnant women with severe malaria in all trimesters."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "d7abcb658ece5de4e9ef3c6f6ea00b4306e956c9f28280e32193b00aba118c76",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 214,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By what percentage does parenteral artesunate reduce mortality compared to quinine in adults with severe malaria?",
+    "normalized_query": "percentage mortality reduction parenteral artesunate compared to quinine adults severe malaria",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Parenteral artesunate reduced mortality from severe malaria by about 40% in adults compared to quinine.",
+    "gold_claims": [
+      "Parenteral artesunate reduced mortality by about 40% in adults with severe malaria compared to quinine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "bdbe7cc01d726683df1fd5d74756295a49d7be3ac1b92c91e745d64ee3459e18",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 215,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended dose of parenteral artesunate for children weighing less than 20 kg with severe malaria?",
+    "normalized_query": "dose of parenteral artesunate for children weighing less than 20 kg severe malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Children weighing < 20 kg should receive a higher dose of artesunate of 3 mg/kg body weight per dose.",
+    "gold_claims": [
+      "Children weighing < 20 kg should receive artesunate 3 mg/kg per dose."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "101ca03732c8594a97c946f23f7a51d0bab822c72be55dbb15a630f5aa680921",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 216,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the pre-referral treatment of choice for children under 6 years with suspected severe malaria when intramuscular artesunate is not available?",
+    "normalized_query": "pre-referral treatment for children under 6 years suspected severe malaria when intramuscular artesunate not available",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "When intramuscular artesunate is not available, children < 6 years should be treated with a single rectal dose of artesunate (10 mg/kg body weight).",
+    "gold_claims": [
+      "Children < 6 years should receive rectal artesunate 10 mg/kg if intramuscular artesunate is not available."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "829b197917212e7592d4b2f0db309e5cd660d990a26e13889b0cf89e2cd1c37b",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 219,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended dose of rectal artesunate for pre-referral treatment in children?",
+    "normalized_query": "dose of rectal artesunate for pre-referral treatment in children",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The recommended dose of rectal artesunate for pre-referral treatment is 10 mg/kg body weight as a single dose.",
+    "gold_claims": [
+      "The dose of rectal artesunate is 10 mg/kg as a single dose."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "3762821fbd4876a4896c8f68351676bd989ade0700a6bae2e43d3dbbd1f33cd6",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 220,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What are the two general classes of poor-quality antimalarial medicines?",
+    "normalized_query": "two general classes of poor-quality antimalarial medicines",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The two general classes of poor-quality medicines are falsified (counterfeit) medicines and substandard medicines.",
+    "gold_claims": [
+      "The two general classes of poor-quality medicines are falsified and substandard medicines."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ce47df0d30616249396db15cbef17e29909f74164ebcc7ac81bc05e3e03b169f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 223,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the treatment failure threshold that should trigger a change in national malaria treatment policy?",
+    "normalized_query": "treatment failure threshold to change national malaria treatment policy",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "An antimalarial medicine recommended in national policy should be changed if the total treatment failure proportion is ≥ 10%.",
+    "gold_claims": [
+      "A national malaria treatment policy should be changed if the treatment failure proportion is ≥ 10%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "3ecb53e68ff00f23cd7b0ec110892d8c5eef563db8a33a04a26c06eed9601014",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 224,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What cure rate should a new antimalarial medicine have before being introduced into national treatment policy?",
+    "normalized_query": "cure rate for new antimalarial medicine before introduction into national treatment policy",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "A new antimalarial medicine should have an average cure rate of > 95% before being introduced into national treatment policy.",
+    "gold_claims": [
+      "A new antimalarial medicine should have a cure rate of > 95% before introduction."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "3ecb53e68ff00f23cd7b0ec110892d8c5eef563db8a33a04a26c06eed9601014",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 224,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is mass testing and treatment (MTaT)?",
+    "normalized_query": "definition of mass testing and treatment MTaT",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Mass testing and treatment (MTaT) involves parasitological testing of the entire population of a delimited geographical area and treatment of all positive cases with an appropriate antimalarial medicine.",
+    "gold_claims": [
+      "Mass testing and treatment (MTaT) involves testing the entire population of a geographical area and treating all positive cases."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "e9f1db5f722da551b3d95fbdcc0f6ba951ae64a580ade57ae850d42381cb7f3a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 229,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Does mass testing and treatment reduce the prevalence of malaria two months after the last round?",
+    "normalized_query": "does mass testing and treatment reduce malaria prevalence two months after last round",
+    "query_type": "study_result",
+    "query_tags": [
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "MTaT does not reduce the prevalence of malaria two months after the last round (RD: -26 per 1000 population; 95% CI -68 to 15 per 100 persons).",
+    "gold_claims": [
+      "MTaT does not reduce malaria prevalence two months after the last round."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1a1f4b2447283d616d6f981fd31dfb3c81da44c42b14410e55124b5a13b5135a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 229,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is targeted drug administration (TDA)?",
+    "normalized_query": "definition of targeted drug administration TDA",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Targeted drug administration (TDA) is a form of chemoprevention involving the provision of a full therapeutic course of an antimalarial medicine to individuals at increased risk of malaria infection compared to the general population.",
+    "gold_claims": [
+      "Targeted drug administration (TDA) provides antimalarial medicine to individuals at increased risk of infection."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "e4fe4bacd0aea116919ff884dd3e5451e0a12d8a4c094365e01571c2cea29844",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 232,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is targeted testing and treatment (TTaT)?",
+    "normalized_query": "definition of targeted testing and treatment TTaT",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Targeted testing and treatment (TTaT) is the parasitological testing of individuals at increased risk of malaria infection and treatment of all positive cases with an appropriate antimalarial medicine.",
+    "gold_claims": [
+      "Targeted testing and treatment (TTaT) involves testing individuals at increased risk of malaria and treating positive cases."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "645bf62c191b225defdb1e9d5a1a3cf863d0c93402ca920c74dba936a9028ecc",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 236,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is reactive drug administration (RDA)?",
+    "normalized_query": "definition of reactive drug administration RDA",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "RDA is the provision of antimalarial medicine as chemoprevention to every person living with or near a person with a confirmed malaria infection, or to every person who was likely exposed to infection at the same time and place as the index case.",
+    "gold_claims": [
+      "Reactive drug administration (RDA) provides antimalarial medicine to people living near a confirmed malaria case or those co-exposed with the index case."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1a8a53418d27721429b3a4886cf226404e6dcc2afe98c77a0663868c4d484960",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 241,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is reactive case detection and treatment (RACDT)?",
+    "normalized_query": "definition of reactive case detection and treatment RACDT",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "RACDT is the parasitological testing of every person living with or near a person who has a confirmed malaria case, or every person who was likely exposed to infection at the same time and place as the index case, and treatment of those who are positive for malaria.",
+    "gold_claims": [
+      "Reactive case detection and treatment (RACDT) involves testing people living near a confirmed malaria case or co-exposed with the index case and treating those who test positive."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "4f159a439ad6811c4187ac8e9b45c3b6ba00adf0a9a47988b82941156f3d0f45",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 245,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended single dose of primaquine as a gametocytocide for uncomplicated falciparum malaria?",
+    "normalized_query": "single dose of primaquine as gametocytocide for uncomplicated falciparum malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The recommended single dose of primaquine as a gametocytocide for uncomplicated falciparum malaria is 0.25 mg base/kg body weight.",
+    "gold_claims": [
+      "The single dose of primaquine as a gametocytocide is 0.25 mg base/kg."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "aaed24385593cdb1abce0eefb7c5aff9380fbbb2cd4846d36905f494a5a2c927",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 222,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "In which part of the world has artemisinin resistance in P. falciparum been documented?",
+    "normalized_query": "regions with artemisinin resistance in P. falciparum",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Artemisinin resistance in P. falciparum has been documented in parts of Cambodia, the Lao People's Democratic Republic, Myanmar, Thailand and Viet Nam.",
+    "gold_claims": [
+      "Artemisinin resistance in P. falciparum is present in parts of Cambodia, Lao PDR, Myanmar, Thailand and Viet Nam."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c24d49d357471b649e517bc19b889c7ff96d2306df7b429358cb319e9c698f1d",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 222,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended treatment for severe malaria in areas with established artemisinin resistance?",
+    "normalized_query": "treatment for severe malaria in areas with established artemisinin resistance",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "For severe malaria in areas with established artemisinin resistance, it is recommended that parenteral artesunate and parenteral quinine be given together in full doses.",
+    "gold_claims": [
+      "Parenteral artesunate and parenteral quinine should be given together in full doses for severe malaria in areas with artemisinin resistance."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c24d49d357471b649e517bc19b889c7ff96d2306df7b429358cb319e9c698f1d",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 222,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which species of malaria are generally considered sensitive to chloroquine?",
+    "normalized_query": "malaria species considered sensitive to chloroquine",
+    "query_type": "treatment",
+    "query_tags": [
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "P. ovale, P. malariae and P. knowlesi are generally considered to be sensitive to chloroquine.",
+    "gold_claims": [
+      "P. ovale, P. malariae and P. knowlesi are considered sensitive to chloroquine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c35213459a2398dae9ba7e95c7bbba3c617b5bc6d71ac4fac9bc9e8bff73db61",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 193,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended dose of chloroquine for uncomplicated malaria caused by P. ovale, P. malariae or P. knowlesi?",
+    "normalized_query": "chloroquine dose for uncomplicated P. ovale P. malariae P. knowlesi malaria",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "The blood stages of P. ovale, P. malariae and P. knowlesi should be treated with the standard regimen of ACT or chloroquine, as for vivax malaria.",
+    "gold_claims": [
+      "P. ovale, P. malariae and P. knowlesi should be treated with the standard regimen of chloroquine or ACT."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "979c4a74353d46519bd30a5c64efa09102c7b0f592e3b067bd2a8439910fccb1",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the pooled sensitivity of semi-quantitative G6PD tests at the 30% threshold for the STANDARD G6PD test?",
+    "normalized_query": "pooled sensitivity of semi-quantitative G6PD tests at 30 percent threshold STANDARD G6PD test",
+    "query_type": "numerical",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The pooled sensitivity of the STANDARD G6PD test at the 30% threshold is 100% (95% CI 98.2, 100).",
+    "gold_claims": [
+      "The STANDARD G6PD test has a sensitivity of 100% at the 30% threshold."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "be17ac196bf4c361caf8af9fc12bdfac0e4e25ae80edf560e539795a516f65a2",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 199,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the pooled specificity of semi-quantitative G6PD tests at the 30% threshold for the STANDARD G6PD test?",
+    "normalized_query": "pooled specificity of semi-quantitative G6PD tests at 30 percent threshold STANDARD G6PD test",
+    "query_type": "numerical",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The pooled specificity of the STANDARD G6PD test at the 30% threshold is 97.0% (95% CI 96.5, 97.5).",
+    "gold_claims": [
+      "The STANDARD G6PD test has a specificity of 97.0% at the 30% threshold."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "be17ac196bf4c361caf8af9fc12bdfac0e4e25ae80edf560e539795a516f65a2",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 199,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "In which region is tafenoquine recommended for preventing relapses of P. vivax?",
+    "normalized_query": "region where tafenoquine recommended for preventing P. vivax relapses",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Tafenoquine is recommended for preventing relapses of P. vivax in South America.",
+    "gold_claims": [
+      "Tafenoquine is recommended for P. vivax relapse prevention in South America."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2c74eb15bd6226ba9d4c2284c3b29be83917758c4f26bb5a613a22f320ae3dd3",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 203,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which G6PD test is required before tafenoquine administration?",
+    "normalized_query": "G6PD test required before tafenoquine administration",
+    "query_type": "diagnostic_test",
+    "query_tags": [
+      "diagnostic_test"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Quantitative or semi-quantitative G6PD testing must be done before tafenoquine administration.",
+    "gold_claims": [
+      "Quantitative or semi-quantitative G6PD testing is required before tafenoquine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2c74eb15bd6226ba9d4c2284c3b29be83917758c4f26bb5a613a22f320ae3dd3",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 203,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended treatment for uncomplicated malaria when the species is not known with certainty?",
+    "normalized_query": "treatment for uncomplicated malaria when species not known",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "If the malaria species is not known with certainty, adults and children should be treated as for uncomplicated P. falciparum malaria.",
+    "gold_claims": [
+      "Uncomplicated malaria of unknown species should be treated as P. falciparum malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "979c4a74353d46519bd30a5c64efa09102c7b0f592e3b067bd2a8439910fccb1",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended treatment for mixed malaria infections?",
+    "normalized_query": "treatment for mixed malaria infections",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "ACTs are effective against all malaria species and so are the treatment of choice for mixed infections.",
+    "gold_claims": [
+      "ACTs are the treatment of choice for mixed malaria infections."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "979c4a74353d46519bd30a5c64efa09102c7b0f592e3b067bd2a8439910fccb1",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 192,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the prevalence of G6PD deficiency typically in tropical areas?",
+    "normalized_query": "prevalence of G6PD deficiency in tropical areas",
+    "query_type": "prevalence",
+    "query_tags": [
+      "numerical",
+      "prevalence"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The prevalence of G6PD deficiency in tropical areas is typically 3-35%.",
+    "gold_claims": [
+      "G6PD deficiency prevalence in tropical areas is typically 3-35%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "df8502178d7c86fa1ecdd591619d1deb41bbde5ed596be0f44b2428cc1c14d94",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 208,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the definition of hyperparasitaemia in severe P. falciparum malaria?",
+    "normalized_query": "definition of hyperparasitaemia in severe P. falciparum malaria",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Hyperparasitaemia in severe P. falciparum malaria is defined as a parasite count > 10%.",
+    "gold_claims": [
+      "Hyperparasitaemia in severe falciparum malaria is a parasite count > 10%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ece1100d5c8d41d685e6ba9ecd86e2e01b5208129724e709ee0cdd4bf12a8d54",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the definition of hyperparasitaemia in severe P. knowlesi malaria?",
+    "normalized_query": "definition of hyperparasitaemia in severe P. knowlesi malaria",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "definition",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Hyperparasitaemia in severe P. knowlesi malaria is defined as a parasite density > 100,000/µL.",
+    "gold_claims": [
+      "Hyperparasitaemia in severe knowlesi malaria is a parasite density > 100,000/µL."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ece1100d5c8d41d685e6ba9ecd86e2e01b5208129724e709ee0cdd4bf12a8d54",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 210,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended dose of quinine for severe malaria if the patient has persisting acute kidney injury after 48 hours?",
+    "normalized_query": "quinine dose for severe malaria with persisting acute kidney injury after 48 hours",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "dosage"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "If a patient with severe malaria has persisting acute kidney injury or there is no clinical improvement by 48 h, the dose of quinine should be reduced by one third, to 10 mg salt/kg body weight every 12 h.",
+    "gold_claims": [
+      "Quinine dose should be reduced to 10 mg salt/kg every 12 h in patients with persisting acute kidney injury after 48 hours."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "d926a0fbcff50f40afc56cb8c35c649ac5344f7789e276de7d83ec5946db4b35",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 211,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the evidence quality for the recommendation that parenteral artesunate should be used for severe malaria?",
+    "normalized_query": "evidence quality for recommendation parenteral artesunate severe malaria",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "The recommendation for parenteral artesunate for severe malaria is based on high certainty evidence.",
+    "gold_claims": [
+      "The recommendation for parenteral artesunate for severe malaria is based on high certainty evidence."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "75361a679b787ad6995e285f3dfee4a9ed8850d9c1d52069de7cceb0fb56c38a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 214,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+
+
+
+{
+    "query_id": null,
+    "original_query": "What was identified as a major driver of non-adherence to medicine during MDA implementation?",
+    "normalized_query": "major driver of non-adherence to medicine during mass drug administration MDA",
+    "query_type": "factoid",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Residents' absenteeism.",
+    "gold_claims": [
+      "Absenteeism was identified as one of the major driving forces of non-adherence to medicine during MDA."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "01357a4d38a3bb3afd5d8d90a946e432728dabc5fac65bf2b58ca94dda2c2f1b",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 142,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Is MDA recommended to reduce P. falciparum transmission in moderate- to high-transmission settings?",
+    "normalized_query": "mass drug administration MDA recommendation P. falciparum moderate high transmission settings",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "No. MDA is not recommended for this purpose in moderate- to high-transmission settings.",
+    "gold_claims": [
+      "MDA to reduce P. falciparum transmission is not recommended in moderate- to high-transmission settings."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "b15b8ab21de41906eaf07336db313a58f8e26c230a9fa74d13effe1da666cd03",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 143,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How are moderate- to high-transmission P. falciparum settings defined for the MDA recommendation?",
+    "normalized_query": "definition moderate high P. falciparum transmission prevalence incidence threshold MDA",
+    "query_type": "definition",
+    "query_tags": [
+      "medical_term",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "P. falciparum parasite prevalence greater than 10%, or incidence above 250 cases per 1000 population per year.",
+    "gold_claims": [
+      "Moderate- to high-transmission settings are defined as P. falciparum prevalence greater than 10% or incidence above 250 cases per 1000 population per year."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "b15b8ab21de41906eaf07336db313a58f8e26c230a9fa74d13effe1da666cd03",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 143,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What risk difference was reported for P. falciparum parasitaemia incidence 1–3 months after MDA in the cRCT?",
+    "normalized_query": "P. falciparum parasitaemia incidence risk difference 1-3 months after MDA cRCT",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "-22 per 1000 person-years (95% CI: -34 to -5).",
+    "gold_claims": [
+      "The cRCT reported a risk difference of -22 per 1000 person-years for P. falciparum parasitaemia incidence 1–3 months after MDA."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "70ff9686aa5b6c43088068946a5839c4588ee6163905a1e61446a2743865b0df",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 143,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What was the rate of serious adverse events among people who participated in MDA?",
+    "normalized_query": "serious adverse event rate participants mass drug administration MDA antimalarial doses",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "0.01 per 1000 doses of antimalarial medicine.",
+    "gold_claims": [
+      "The serious adverse event rate among MDA participants was 0.01 per 1000 doses of antimalarial medicine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "70622e13fa7d8625ef6fee2c875e8d768399965891ac13aa00e9cdea67f7af66",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 143,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How did reported acceptability of MDA change before and after the intervention in one study?",
+    "normalized_query": "MDA acceptability before after intervention percentage study",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "percentage",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "It increased from 62% before the intervention to 98% after.",
+    "gold_claims": [
+      "One study reported that MDA acceptability increased from 62% before the intervention to 98% after."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "4d9ba872cf5b431a40e723b2ab4a874bdab0abf8a2e1cf0b8e2c01bca0e21001",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 145,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How quickly does the transmission-reducing effect of MDA for P. vivax wane?",
+    "normalized_query": "P. vivax mass drug administration MDA transmission effect wanes duration",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Within 1–3 months.",
+    "gold_claims": [
+      "The transmission-reducing effect of MDA for P. vivax wanes within 1–3 months."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "68421fd2a28f8cf1e1d49460632241d568875baae01410ed99f832bd9379ed48",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 146,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How should antimalarial dosage be determined during MDA when possible?",
+    "normalized_query": "MDA antimalarial dosage weight age dosing recommendation",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "By weight wherever possible; age-based dosing should be used only when weight is unknown.",
+    "gold_claims": [
+      "During MDA, drug dosage should be determined by weight wherever possible, using age only when weight is unknown."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "436e33d1b8ff660c562deafe26f5bd5152a450f3975099c8ecd2a6733926edf4",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 146,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Should MDA be given to people already receiving malaria chemoprevention such as SMC, PMC, or IPTp?",
+    "normalized_query": "MDA concurrent malaria chemoprevention SMC PMC IPTp contraindication",
+    "query_type": "contraindication",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "No. MDA should not be given to individuals receiving other forms of malaria chemoprevention.",
+    "gold_claims": [
+      "MDA should not be given to individuals receiving other forms of malaria chemoprevention."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "8747d5a58c0359dbff5705314665c7afb836784eee8d84582fc95b5c62039b42",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 147,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What risk difference in P. vivax prevalence was reported 1–3 months after MDA in five cRCTs?",
+    "normalized_query": "P. vivax prevalence risk difference 1-3 months after MDA five cRCTs",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "-113 per 1000 persons (95% CI: -119 to -101).",
+    "gold_claims": [
+      "Five cRCTs reported a P. vivax prevalence risk difference of -113 per 1000 persons 1–3 months after MDA."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "109b2552a7641d0678ffc4d7e47a56c52d3c38d39bebe9d9724b6141400a0a3a",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 147,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What adverse-event rate was reported among people who participated in MDA for P. vivax?",
+    "normalized_query": "P. vivax MDA adverse event rate per 1000 antimalarial doses",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "19.9 adverse events per 1000 doses of antimalarial medicine.",
+    "gold_claims": [
+      "The adverse-event rate among participants in P. vivax MDA was 19.9 per 1000 doses of antimalarial medicine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1d819aabd8a2abbd7e704e130e506e7e5354e81ecad42dff5c45d35e8aecb169",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 148,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Is mass treatment with an 8-aminoquinoline medicine alone recommended to reduce P. vivax transmission?",
+    "normalized_query": "mass relapse prevention 8-aminoquinoline alone P. vivax transmission recommendation",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "No. Mass treatment with an 8-aminoquinoline alone is not recommended to reduce P. vivax transmission.",
+    "gold_claims": [
+      "Mass treatment with an 8-aminoquinoline medicine alone is not recommended to reduce P. vivax transmission."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "bbba6067aa45546556dea13724bf9621a8e8aacc8e7d350329fcd09d3d7d7df0",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 151,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which two malaria vaccines are WHO-prequalified and recommended for use?",
+    "normalized_query": "WHO prequalified recommended malaria vaccines names",
+    "query_type": "factoid",
+    "query_tags": [
+      "medical_term",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "RTS,S/AS01 and R21/Matrix-M.",
+    "gold_claims": [
+      "RTS,S/AS01 and R21/Matrix-M are WHO-prequalified and recommended malaria vaccines."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "8910804bb157e289d4731053ce19a621758dd671e1f811013d5df8d1c1f02d18",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 153,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which children are prioritized for WHO-recommended malaria vaccination?",
+    "normalized_query": "WHO malaria vaccination priority children malaria-endemic moderate high transmission",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Children living in malaria-endemic areas, with priority given to areas of moderate and high transmission.",
+    "gold_claims": [
+      "WHO recommends malaria vaccination for children in malaria-endemic areas, prioritizing moderate- and high-transmission areas."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "be155c18cfccd66f285605241b7f9fa40e4c394f094b9ea5e52e48808218c6fa",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 154,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the standard WHO-recommended malaria vaccine schedule for children?",
+    "normalized_query": "WHO malaria vaccine schedule children four doses age 5 months",
+    "query_type": "dosage",
+    "query_tags": [
+      "treatment",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "A four-dose schedule starting from 5 months of age.",
+    "gold_claims": [
+      "WHO recommends a four-dose malaria vaccine schedule for children from 5 months of age."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "be155c18cfccd66f285605241b7f9fa40e4c394f094b9ea5e52e48808218c6fa",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 154,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the minimum interval between malaria vaccine doses?",
+    "normalized_query": "minimum interval between malaria vaccine doses",
+    "query_type": "dosage",
+    "query_tags": [
+      "treatment",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Four weeks.",
+    "gold_claims": [
+      "The minimum interval between malaria vaccine doses is four weeks."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "be155c18cfccd66f285605241b7f9fa40e4c394f094b9ea5e52e48808218c6fa",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 154,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the volume of each R21/Matrix-M vaccine dose?",
+    "normalized_query": "R21 Matrix-M vaccine dose volume",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "0.5 mL.",
+    "gold_claims": [
+      "Each R21/Matrix-M vaccine dose is 0.5 mL."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "27c84c5e50b7af58680198025d4f1b1d7b233bdcafdda8f91321a69b07685d0f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 154,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "At what temperature should RTS,S/AS01 and R21/Matrix-M vaccines be stored?",
+    "normalized_query": "RTS,S/AS01 R21/Matrix-M vaccine storage temperature",
+    "query_type": "factoid",
+    "query_tags": [
+      "treatment",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "2–8 °C.",
+    "gold_claims": [
+      "RTS,S/AS01 and R21/Matrix-M vaccines should be stored at 2–8 °C."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "9c60fb7f44c0bdff6739dd5b26516d33e3d1e5211095ef6aab6196bba49683f2",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 155,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "If the malaria vaccine used for a previous dose is unavailable or unknown, should the vaccination series be restarted?",
+    "normalized_query": "malaria vaccine previous product unavailable unknown restart series interchangeability",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "No. The series should be completed with either available WHO-recommended malaria vaccine.",
+    "gold_claims": [
+      "If a previous malaria vaccine product is unavailable or unknown, the series should be completed with an available WHO-recommended vaccine rather than restarted."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1e57e4b4c5694068e6b4d761acd1bd78073e83ba57a556238ace048696b83292",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 155,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "When is the small risk of febrile seizures after malaria vaccination most likely to occur?",
+    "normalized_query": "malaria vaccine febrile seizure timing within seven days 2-3 days",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "clinical",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Within seven days of vaccination, mainly within 2–3 days.",
+    "gold_claims": [
+      "The small risk of febrile seizures occurs within seven days of malaria vaccination, mainly within 2–3 days."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "aad0f4728734e49d7a0a00801169e7e2accf84ed5c49b66a24698b67ce6af84f",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 156,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By how much did three age-based doses of RTS,S/AS01 reduce clinical malaria during 12 months of follow-up in the Phase 3 trial?",
+    "normalized_query": "RTS,S/AS01 three doses reduction clinical malaria 12 months Phase 3 trial",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "percentage",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "51% (95% CI: 47–55).",
+    "gold_claims": [
+      "Three age-based doses of RTS,S/AS01 reduced clinical malaria by 51% during 12 months of follow-up in the Phase 3 trial."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "4cecaf0aababc5101e5897c3ae2a0bd56a53e0091eb6e32ce5a96ebfa99eb507",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 157,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "By how much did age-based R21/Matrix-M vaccination reduce clinical malaria during 12 months after the third dose in the Phase 3 trial?",
+    "normalized_query": "R21 Matrix-M age-based vaccination reduction clinical malaria 12 months third dose Phase 3",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "percentage",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "66% (95% CI: 56–73).",
+    "gold_claims": [
+      "Age-based R21/Matrix-M vaccination reduced clinical malaria by 66% during 12 months after the third dose in the Phase 3 trial."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c536336762ddacb386a5d3748e6e20090d80c3d5806d93af477e56f49fe4d7a5",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 157,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What febrile-seizure rate was associated with R21/Matrix-M vaccination, and what was the outcome of those seizures?",
+    "normalized_query": "R21 Matrix-M febrile seizure rate outcome sequelae",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "numerical",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Approximately one febrile seizure per 2500 vaccinations, and all resolved without sequelae.",
+    "gold_claims": [
+      "R21/Matrix-M was associated with about one febrile seizure per 2500 vaccinations, and all febrile seizures resolved without sequelae."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "374d46655dadfc8d723327fa0aefe1352baf0408f5442e6572f002bec7c804b5",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 159,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "At an assumed R21/Matrix-M price of US$3 per dose, what median ICER per clinical case averted was predicted for a four-dose age-based schedule in perennial settings?",
+    "normalized_query": "R21 Matrix-M US$3 per dose median ICER clinical case averted four-dose age-based perennial settings",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "US$7 per clinical case averted (95% CI: 4–48).",
+    "gold_claims": [
+      "At a vaccine price of US$3 per dose, the predicted median ICER for a four-dose age-based R21/Matrix-M schedule in perennial settings was US$7 per clinical case averted."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "fcdd95cba7f0a2c7c8da96f7fe19b203f3a454efcf300a5b7a7400b17efc8a03",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 160,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Did malaria vaccine uptake negatively affect other childhood vaccinations, ITN use, or care-seeking for febrile illness in the pilot introduction?",
+    "normalized_query": "malaria vaccine uptake effect other childhood vaccinations ITN use health-seeking febrile illness pilot",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "No. It had no negative effect on those outcomes.",
+    "gold_claims": [
+      "Malaria vaccine uptake had no negative effect on other childhood vaccinations, ITN use, or health-seeking behaviour for febrile illness."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "74dc5b2c357c46f345e40babe162c04c4a2c483761bdc6ddd5297b44b5ab175b",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 161,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How did access to at least one malaria prevention tool change in Ghana after RTS,S/AS01 introduction?",
+    "normalized_query": "Ghana malaria prevention tool access ITN RTS,S/AS01 before after percentage",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "percentage",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "It increased from 61% to 94%.",
+    "gold_claims": [
+      "In Ghana, access to at least one malaria prevention tool increased from 61% to 94% after RTS,S/AS01 introduction."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "74dc5b2c357c46f345e40babe162c04c4a2c483761bdc6ddd5297b44b5ab175b",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 161,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "About how many RTS,S/AS01 doses were administered across the three pilot countries, and how many children received a first dose?",
+    "normalized_query": "RTS,S/AS01 pilot countries doses administered children first dose",
+    "query_type": "numerical",
+    "query_tags": [
+      "numerical",
+      "study",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "About 4.2 million doses were administered, and more than 1.2 million children received their first dose.",
+    "gold_claims": [
+      "Across the three pilot countries, about 4.2 million RTS,S/AS01 doses were administered and more than 1.2 million children received a first dose."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "7d30a7197cbd2a7cbb53b9fc2a38f934b30744d0cf77139735624465ca891dc7",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 162,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What coverage levels did all three pilot countries reach for the first, third, and fourth RTS,S/AS01 doses?",
+    "normalized_query": "RTS,S/AS01 pilot coverage first third fourth dose percentages",
+    "query_type": "numerical",
+    "query_tags": [
+      "percentage",
+      "numerical",
+      "study",
+      "treatment"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "More than 80% for the first dose, at least 69% for the third dose, and at least 40% for the fourth dose.",
+    "gold_claims": [
+      "All three pilot countries reached more than 80% first-dose coverage, at least 69% third-dose coverage, and at least 40% fourth-dose coverage."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "7d30a7197cbd2a7cbb53b9fc2a38f934b30744d0cf77139735624465ca891dc7",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 162,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What reductions in all-cause mortality and hospitalization with severe malaria were observed after RTS,S/AS01 introduction in the pilot implementation?",
+    "normalized_query": "RTS,S/AS01 pilot reduction all-cause mortality severe malaria hospitalization percentages",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "percentage",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "13% reduction in all-cause mortality excluding injury and 22% reduction in hospitalization with severe malaria.",
+    "gold_claims": [
+      "RTS,S/AS01 introduction was associated with a 13% reduction in all-cause mortality excluding injury and a 22% reduction in hospitalization with severe malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ead9536083cf73615f7445ca3a55df81686d1a520aac9b52c7b1b0ac7f1484a8",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 162,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Within what time after malaria symptom onset should programmes ensure access to diagnosis and effective treatment?",
+    "normalized_query": "malaria early diagnosis prompt effective treatment within hours symptom onset",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "clinical",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Within 24–48 hours of symptom onset.",
+    "gold_claims": [
+      "Programmes should ensure access to early diagnosis and prompt effective treatment within 24–48 hours of malaria symptom onset."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c54170ab2feb0c902c21fc3f46373985e6a160abf5839e268cc0a283b69500ad",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 163,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How many effective antimalarial medicines with different mechanisms of action should be used to treat malaria episodes?",
+    "normalized_query": "malaria combination therapy number effective antimalarial medicines different mechanisms",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "At least two.",
+    "gold_claims": [
+      "All malaria episodes should be treated with at least two effective antimalarial medicines with different mechanisms of action."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2b4a59004e9fea40e8ab749b8fa077393d2a6fb5d0c9c966a0a7e3c061c42cea",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 163,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "At what temperature should malaria be suspected in a patient in a malaria-endemic area when there is no other obvious cause?",
+    "normalized_query": "malaria suspected endemic area temperature threshold no other cause",
+    "query_type": "diagnosis",
+    "query_tags": [
+      "diagnosis",
+      "symptom",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "At a temperature of at least 37.5 °C, or with a history of fever.",
+    "gold_claims": [
+      "In malaria-endemic areas, malaria should be suspected with a history of fever or temperature of at least 37.5 °C when there is no other obvious cause."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0e50c4ad6aa271970761a50cb85b6846d243572a27dd8a0d530b54652872ca62",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 164,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How quickly should parasitological diagnostic results be available after a patient presents with suspected malaria?",
+    "normalized_query": "malaria parasitological diagnostic result turnaround time suspected malaria",
+    "query_type": "diagnostic_test",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Within less than 2 hours.",
+    "gold_claims": [
+      "Parasitological diagnostic results should be available within less than 2 hours of the patient presenting."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0e50c4ad6aa271970761a50cb85b6846d243572a27dd8a0d530b54652872ca62",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 164,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "If the initial blood film is negative in a patient with manifestations compatible with severe malaria, how often should repeat blood films be examined?",
+    "normalized_query": "severe malaria initial blood film negative repeat blood films interval",
+    "query_type": "diagnostic_test",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "At 6–12-hour intervals.",
+    "gold_claims": [
+      "When the initial blood film is negative in a patient with manifestations compatible with severe malaria, repeat blood films should be examined at 6–12-hour intervals."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ba59bc5103f8c0c421744a22a41ee5621287e2de1f490f7771f2560d9e6383eb",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 164,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the approximate microscopy detection limit for malaria parasites under typical field conditions?",
+    "normalized_query": "malaria light microscopy typical field conditions detection limit parasites per microlitre",
+    "query_type": "diagnostic_test",
+    "query_tags": [
+      "diagnostic_test",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Approximately 100 parasites per µL of blood.",
+    "gold_claims": [
+      "Under typical field conditions, the sensitivity limit of light microscopy is approximately 100 malaria parasites per µL of blood."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0091ad2de05a0f39832376151c1151a0284ed36ed8d7666977ff8caafafefd0c",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 164,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What false-positive and invalid-rate thresholds does WHO use when selecting malaria RDTs?",
+    "normalized_query": "WHO malaria RDT selection false positive rate invalid rate thresholds",
+    "query_type": "diagnostic_test",
+    "query_tags": [
+      "diagnostic_test",
+      "percentage",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "False-positive rate below 10% and invalid rate below 5%.",
+    "gold_claims": [
+      "WHO malaria RDT selection criteria include a false-positive rate below 10% and an invalid rate below 5%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "bb6bd64719bcf967b8d49ba608a6e1020c8fd4f9f2ccf42d541d72e44eb914c8",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 165,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What average sensitivity and specificity were reported for PfHRP2-detecting RDTs in symptomatic patients in endemic areas?",
+    "normalized_query": "PfHRP2 RDT average sensitivity specificity symptomatic patients endemic areas",
+    "query_type": "study_result",
+    "query_tags": [
+      "diagnostic_test",
+      "percentage",
+      "study"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "95.0% sensitivity and 95.2% specificity.",
+    "gold_claims": [
+      "PfHRP2-detecting RDTs had an average sensitivity of 95.0% and specificity of 95.2% in the systematic review."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c2dac87a601e1a2c9e4c084301cd98ecdee22f5ab51d37ac9db70772beb1bdbb",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 165,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How is uncomplicated malaria defined?",
+    "normalized_query": "definition uncomplicated malaria positive parasitological test no severe features",
+    "query_type": "definition",
+    "query_tags": [
+      "diagnosis",
+      "diagnostic_test",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Symptoms of malaria with a positive microscopy or RDT result and no features of severe malaria.",
+    "gold_claims": [
+      "Uncomplicated malaria is defined by malaria symptoms, a positive parasitological test, and no features of severe malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "8cdb86f580a66530460cb70211215deaaaf82cb211919b34c2eec39d20ab732b",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 166,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "When should antipyretics be used in young children with malaria, and what paracetamol dose is described?",
+    "normalized_query": "young children malaria antipyretic temperature threshold paracetamol dose",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "numerical",
+      "symptom",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "When core temperature is above 38.5 °C; paracetamol 15 mg/kg body weight every 4 hours.",
+    "gold_claims": [
+      "In young children with malaria, antipyretics should be used when core temperature is above 38.5 °C, and paracetamol may be given at 15 mg/kg body weight every 4 hours."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0a094f617d4a0e0e2968bdf722cadbac5ab1ddd9416ab6cfd5c9eed223390d05",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 167,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How many seizures within 24 hours should prompt treatment as severe malaria?",
+    "normalized_query": "malaria seizures 24 hours threshold treat as severe malaria",
+    "query_type": "clinical_finding",
+    "query_tags": [
+      "symptom",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "More than two seizures within 24 hours.",
+    "gold_claims": [
+      "Patients with more than two seizures within a 24-hour period should be treated as having severe malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0a094f617d4a0e0e2968bdf722cadbac5ab1ddd9416ab6cfd5c9eed223390d05",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 167,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which ACTs are recommended for children and adults with uncomplicated P. falciparum malaria?",
+    "normalized_query": "recommended ACTs uncomplicated P. falciparum children adults",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Artemether-lumefantrine, artesunate-amodiaquine, artesunate-mefloquine, dihydroartemisinin-piperaquine, artesunate plus sulfadoxine-pyrimethamine, and artesunate-pyronaridine.",
+    "gold_claims": [
+      "The recommended ACT options are artemether-lumefantrine, artesunate-amodiaquine, artesunate-mefloquine, dihydroartemisinin-piperaquine, artesunate plus sulfadoxine-pyrimethamine, and artesunate-pyronaridine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "afb4cad7d039144f0bee6d61e931d6d7fb65f6a09d594041714e077a9b2a61c7",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 168,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which patients should avoid artesunate-pyronaridine because of its association with liver transaminitis?",
+    "normalized_query": "artesunate-pyronaridine ASPY avoid known liver disease transaminitis",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Individuals with known clinically apparent liver disease.",
+    "gold_claims": [
+      "Artesunate-pyronaridine should be avoided in individuals with known clinically apparent liver disease."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1b42190ecbe4ceaa010ef6090bba44df38716a0653614cdf97ed109a3dbe69fd",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 170,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How many days of treatment with an artemisinin derivative should ACT regimens provide?",
+    "normalized_query": "ACT regimen duration artemisinin derivative days",
+    "query_type": "dosage",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Three days.",
+    "gold_claims": [
+      "ACT regimens should provide three days of treatment with an artemisinin derivative."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "193d3a513b6bfa08f236b1839a69f333864788043063e76d0a537ea4b9b238e6",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 172,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended artemether-lumefantrine dosing schedule?",
+    "normalized_query": "artemether lumefantrine recommended dosing schedule twice daily 3 days six doses 8 hours",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Twice daily for 3 days, for six doses total; the first two doses should ideally be 8 hours apart.",
+    "gold_claims": [
+      "Artemether-lumefantrine is given twice daily for three days, for six doses total, with the first two doses ideally 8 hours apart."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c8dfb15d769c5e3029b575d9b4acc8995f16153e751b137a80d328cc721aa2a0",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 173,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What daily folic acid dose should not be given with sulfadoxine-pyrimethamine because it significantly reduces SP efficacy?",
+    "normalized_query": "folic acid dose reduces sulfadoxine-pyrimethamine SP efficacy concomitant",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "5 mg daily.",
+    "gold_claims": [
+      "Folic acid at 5 mg daily significantly reduces SP efficacy and should not be given concomitantly."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2e84e7463b7351a29e1fa010d74f9335d406ff6ca7b2bb2eeae3c86c7d060849",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 175,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What minimum daily doses of dihydroartemisinin and piperaquine are recommended for children weighing under 25 kg?",
+    "normalized_query": "dihydroartemisinin piperaquine minimum daily dose children under 25 kg 3 days",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "At least 2.5 mg/kg body weight per day of dihydroartemisinin and 20 mg/kg body weight per day of piperaquine for 3 days.",
+    "gold_claims": [
+      "Children weighing under 25 kg should receive at least 2.5 mg/kg/day dihydroartemisinin and 20 mg/kg/day piperaquine for three days."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0b0304c145f93a76bd86929e412454639c831b5d404ac555b5c71b8457c86489",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 176,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Why should high-fat meals be avoided with dihydroartemisinin-piperaquine?",
+    "normalized_query": "dihydroartemisinin piperaquine high-fat meals avoid QT interval absorption",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "They accelerate piperaquine absorption and increase the risk of potentially arrhythmogenic QT-interval prolongation.",
+    "gold_claims": [
+      "High-fat meals accelerate piperaquine absorption and increase the risk of potentially arrhythmogenic QT-interval prolongation."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "0b0208986960f443ca3e6485279d209728d4391f2e233f9f8ab4546344836de8",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 176,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "In which patients should dihydroartemisinin-piperaquine not be used because of QT-prolongation risk?",
+    "normalized_query": "dihydroartemisinin piperaquine contraindication congenital QT prolongation medications conditions prolong QT",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Patients with congenital QT prolongation, a clinical condition that prolongs the QT interval, or medications that prolong the QT interval.",
+    "gold_claims": [
+      "Dihydroartemisinin-piperaquine should not be used in patients with congenital QT prolongation or with conditions or medications that prolong the QT interval."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "8bed204f0549deec954d750b8e310ee2d0c6e2cd90167b32532657c8160d0ebf",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 177,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What are the two main causes of recurrent P. falciparum malaria described in the guideline?",
+    "normalized_query": "recurrent P. falciparum malaria causes reinfection recrudescence treatment failure",
+    "query_type": "cause",
+    "query_tags": [
+      "diagnosis",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "Re-infection or recrudescence (treatment failure).",
+    "gold_claims": [
+      "Recurrent P. falciparum malaria can result from re-infection or recrudescence."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c5f7254e63ebba94df964dacddac3c773cdb971b73d05b3f9e763011e3c4d1cd",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 177,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What second-line treatment is recommended for P. falciparum treatment failure within 28 days?",
+    "normalized_query": "P. falciparum treatment failure within 28 days second-line alternative ACT",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "An alternative ACT known to be effective in the region.",
+    "gold_claims": [
+      "Treatment failure within 28 days should be treated with an alternative ACT known to be effective in the region."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c5f7254e63ebba94df964dacddac3c773cdb971b73d05b3f9e763011e3c4d1cd",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 177,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How should presumed P. falciparum treatment failures occurring more than 4 weeks after initial treatment be managed operationally?",
+    "normalized_query": "P. falciparum treatment failure after 4 weeks operational management new infection first-line ACT",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "They should be considered new infections and treated with the first-line ACT.",
+    "gold_claims": [
+      "Presumed treatment failures after four weeks should be considered new infections operationally and treated with the first-line ACT."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ff04e330771f1444cd8b1b5d1cd0c6c2176f4f46ec08e0bb2a7c695591296182",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 177,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Why should mefloquine generally not be reused within 60 days of the first treatment?",
+    "normalized_query": "mefloquine reuse within 60 days neuropsychiatric reactions alternative ACT",
+    "query_type": "adverse_effect",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "clinical",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Because reuse within 60 days is associated with an increased risk of neuropsychiatric reactions; an alternative ACT should be used.",
+    "gold_claims": [
+      "Reuse of mefloquine within 60 days is associated with increased neuropsychiatric reactions, so an alternative ACT should be used."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "ff04e330771f1444cd8b1b5d1cd0c6c2176f4f46ec08e0bb2a7c695591296182",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 177,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What primaquine regimen is recommended with an ACT to reduce P. falciparum transmission in low-transmission areas, and is G6PD testing required?",
+    "normalized_query": "primaquine regimen 0.25 mg/kg ACT low-transmission P. falciparum G6PD testing",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "A single 0.25 mg/kg body-weight dose of primaquine with an ACT; G6PD testing is not required.",
+    "gold_claims": [
+      "In low-transmission areas, a single 0.25 mg/kg dose of primaquine should be given with an ACT to reduce P. falciparum transmission, and G6PD testing is not required."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "1f5e453750ab6279e9bb70ad7128180e406087569f4871ecb5a2f005c3374b52",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 178,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What single primaquine dose is listed for patients weighing 25 to under 50 kg?",
+    "normalized_query": "primaquine single dose 25 to under 50 kg mg base",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "7.5 mg base.",
+    "gold_claims": [
+      "Patients weighing 25 to under 50 kg are assigned a single primaquine dose of 7.5 mg base."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "708f2c914368c0e28d2534792e7d14c2fd1ef2e80caf717a63118adb96551af2",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 178,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What effect did single primaquine doses above 0.4 mg/kg have on gametocyte carriage at day 8?",
+    "normalized_query": "primaquine above 0.4 mg/kg gametocyte carriage day 8 effect",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "medication",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "They reduced gametocyte carriage by around two thirds.",
+    "gold_claims": [
+      "Single primaquine doses above 0.4 mg/kg reduced gametocyte carriage at day 8 by around two thirds."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "2d3de9057ab223fc7047f631b6c2ebdf85430ff124526e373824b3fa7e03c826",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 178,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What was the prevalence of malaria infection in the first trimester in the cited Benin study?",
+    "normalized_query": "Benin study malaria infection prevalence first trimester pregnancy",
+    "query_type": "prevalence",
+    "query_tags": [
+      "study",
+      "percentage",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "21.8%.",
+    "gold_claims": [
+      "The cited Benin study reported a first-trimester malaria infection prevalence of 21.8%."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "665b4e9742b4ce283bee81f4a2876a9728604d42bcd8c1f77312e81a6d4913a0",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 180,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What treatment does the guideline recommend for uncomplicated falciparum malaria in the second and third trimesters of pregnancy?",
+    "normalized_query": "uncomplicated falciparum malaria second third trimester pregnancy ACT treatment",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "An artemisinin-based combination therapy (ACT).",
+    "gold_claims": [
+      "ACTs should be used to treat uncomplicated falciparum malaria in the second and third trimesters of pregnancy."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "7d69a4762e292aee9e2efc3d4a4fc600c03879e520f5c5d5e61aac791346a320",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 180,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Which antimalarial drug classes are stated not to be used in pregnancy?",
+    "normalized_query": "antimalarial drugs not used pregnancy primaquine tetracyclines",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Primaquine and tetracyclines.",
+    "gold_claims": [
+      "Primaquine and tetracyclines should not be used in pregnancy."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "d3451b88d63100c6987491533bd0b0490514c1932bc722b3fd6577cd3bae6653",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 181,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What is the recommended treatment for uncomplicated P. falciparum malaria during the first trimester of pregnancy?",
+    "normalized_query": "first trimester pregnancy uncomplicated P. falciparum recommended treatment artemether-lumefantrine",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Artemether-lumefantrine.",
+    "gold_claims": [
+      "Pregnant women with uncomplicated P. falciparum malaria should be treated with artemether-lumefantrine during the first trimester."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "555321c4a22575c9b47ab9106bc37e0349a044ac11a1488ecb5a6f6b1a54c4b9",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 182,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Are ACTs containing sulfadoxine-pyrimethamine recommended in the first trimester of pregnancy?",
+    "normalized_query": "ACT sulfadoxine-pyrimethamine first trimester pregnancy contraindicated antifolate",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "No. ACTs containing sulfadoxine-pyrimethamine are contraindicated in the first trimester.",
+    "gold_claims": [
+      "ACTs containing sulfadoxine-pyrimethamine are contraindicated during the first trimester of pregnancy."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "555321c4a22575c9b47ab9106bc37e0349a044ac11a1488ecb5a6f6b1a54c4b9",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 182,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How did first-trimester artemether-lumefantrine compare with oral quinine for adverse pregnancy outcomes?",
+    "normalized_query": "first trimester artemether-lumefantrine oral quinine adverse pregnancy outcomes risk aHR",
+    "query_type": "study_result",
+    "query_tags": [
+      "study",
+      "percentage",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": false,
+    "gold_answer": "It was associated with a 42% lower risk of adverse pregnancy outcomes (aHR 0.58; 95% CI: 0.36–0.92).",
+    "gold_claims": [
+      "First-trimester artemether-lumefantrine treatment was associated with a 42% lower risk of adverse pregnancy outcomes than oral quinine."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "c396cd72d42972050ab8841e72cf2a17a92ea4d01ce8f43fb7c00499526ec8a7",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 182,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "Why should sulfadoxine-pyrimethamine with artesunate be avoided in the first weeks of life?",
+    "normalized_query": "sulfadoxine-pyrimethamine artesunate first weeks life avoid bilirubin neonatal hyperbilirubinaemia",
+    "query_type": "contraindication",
+    "query_tags": [
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "Because it can competitively displace bilirubin and aggravate neonatal hyperbilirubinaemia.",
+    "gold_claims": [
+      "SP with artesunate should be avoided in the first weeks of life because SP can displace bilirubin and aggravate neonatal hyperbilirubinaemia."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "9d60ad41e7d41cf1afafe45a9ea1c7393ca45726c8688ad970166423729e3743",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 186,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How should infants weighing under 5 kg with uncomplicated P. falciparum malaria be dosed with ACT?",
+    "normalized_query": "infants under 5 kg uncomplicated P. falciparum ACT same mg/kg target dose 5 kg children",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "At the same mg/kg body-weight target dose as children weighing 5 kg.",
+    "gold_claims": [
+      "Infants weighing under 5 kg with uncomplicated P. falciparum malaria should receive an ACT at the same mg/kg target dose as children weighing 5 kg."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "817e86cdedd95b0809cfcfba8b3380448c9c947ad15b72acea57483413fe50a7",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 187,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "How should non-immune travellers returning to non-endemic settings with uncomplicated P. falciparum malaria be treated?",
+    "normalized_query": "non-immune travellers non-endemic settings uncomplicated P. falciparum treatment ACT",
+    "query_type": "treatment",
+    "query_tags": [
+      "treatment",
+      "medication",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "With an artemisinin-based combination therapy (ACT).",
+    "gold_claims": [
+      "Travellers with uncomplicated P. falciparum malaria returning to non-endemic settings should be treated with an ACT."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "61d11eb7d73fdc2df5ed6b6d339fa35485f2697aa3a4d5dcf19a5d574e354298",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 189,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What parasitaemia threshold defines uncomplicated hyperparasitaemia in the guideline?",
+    "normalized_query": "uncomplicated hyperparasitaemia definition parasitaemia threshold percent P. falciparum",
+    "query_type": "definition",
+    "query_tags": [
+      "diagnosis",
+      "percentage",
+      "numerical",
+      "clinical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "At least 4% parasitaemia without signs of severity.",
+    "gold_claims": [
+      "Uncomplicated hyperparasitaemia is defined as at least 4% parasitaemia without signs of severe malaria."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "93122aac52a5347d37df2720d215b75da31be916ab2f10a118213b959fa28095",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 190,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": null,
+    "original_query": "What total oral chloroquine dose is described as effective for chloroquine-sensitive P. vivax malaria?",
+    "normalized_query": "chloroquine-sensitive P. vivax oral chloroquine total dose mg base per kg",
+    "query_type": "dosage",
+    "query_tags": [
+      "medication",
+      "treatment",
+      "numerical"
+    ],
+    "difficulty": "easy",
+    "answerable": true,
+    "safety_critical": true,
+    "gold_answer": "25 mg base/kg body weight total.",
+    "gold_claims": [
+      "For chloroquine-sensitive P. vivax malaria, oral chloroquine at a total dose of 25 mg base/kg body weight is described as effective."
+    ],
+    "gold_evidence": [
+      {
+        "chunk_id": "b521a994f2fa9c88e4d429aa0dcec5c74be22e11fcc5d8bfc10ad1b23ba9e484",
+        "file_id": "7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21",
+        "page_number": 191,
+        "relevance": 3,
+        "evidence_group": "answer"
+      }
+    ]
+  }
+
+
+
+  
+]

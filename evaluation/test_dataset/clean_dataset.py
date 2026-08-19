@@ -391,9 +391,9 @@ def prepare_retrieval_test_dataset(
 
 if __name__ == '__main__' :
     summary = prepare_retrieval_test_dataset(
-    questions_path="evaluation/test_dataset/guideline_test_dataset.json",
-    chunks_path="giddiness_chunks.json",
-    output_path="evaluation/test_dataset/guideline_test_dataset_clean.json",
+    questions_path="evaluation/test_dataset/malaria_test_data.json",
+    chunks_path="WHO guidelines for malaria_chunks.json",
+    output_path="evaluation/test_dataset/malaria_test_data_clean.json",
     )
 
     print(summary)

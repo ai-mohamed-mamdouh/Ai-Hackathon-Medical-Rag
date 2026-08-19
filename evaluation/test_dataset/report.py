@@ -1,5 +1,6 @@
 import json
 import math
+import re
 from pathlib import Path
 from statistics import mean, median
 
@@ -52,26 +53,141 @@ def percentile(values: list[float], p: float):
     )
 
 
-def calculate_query_metrics(
-    gold_chunk_ids: list[str],
-    retrieved_documents: list[dict],
-    k_values=(1, 3, 5, 10),
-):
-    """
-    Calculate retrieval metrics for one query.
-    """
+def normalize_text(text: str) -> list[str]:
+    """Normalize text into lowercase Unicode word tokens."""
 
-    gold_set = {
-        chunk_id
-        for chunk_id in gold_chunk_ids
-        if chunk_id
+    if not text:
+        return []
+
+    normalized = str(text).casefold()
+
+    # Preserve the meaning of common comparison symbols before tokenization.
+    normalized = normalized.replace("≥", " greater_equal ")
+    normalized = normalized.replace("<=", " less_equal ")
+    normalized = normalized.replace(">=", " greater_equal ")
+    normalized = normalized.replace("≤", " less_equal ")
+    normalized = normalized.replace(">", " greater_than ")
+    normalized = normalized.replace("<", " less_than ")
+
+    return re.findall(r"\b\w+\b", normalized, flags=re.UNICODE)
+
+
+def _ngrams(tokens: list[str], n: int) -> set[tuple[str, ...]]:
+    if len(tokens) < n:
+        return set()
+
+    return {
+        tuple(tokens[i:i + n])
+        for i in range(len(tokens) - n + 1)
     }
 
-    retrieved_ids = [
-        doc.get("chunk_id")
-        for doc in retrieved_documents
-        if doc.get("chunk_id")
+
+def text_similarity(
+    reference_text: str,
+    candidate_text: str,
+) -> float:
+    """
+    Evidence-oriented text similarity in [0, 1].
+
+    This is intentionally asymmetric: it measures how much of the
+    reference/gold text is covered by the retrieved chunk. That is more
+    suitable for retrieval evaluation than symmetric similarity because
+    a chunk can contain the complete answer plus additional context.
+
+    Score:
+        65% unigram coverage
+        35% bigram coverage
+
+    If the normalized reference appears completely inside the candidate,
+    the score is 1.0.
+    """
+
+    reference_tokens = normalize_text(reference_text)
+    candidate_tokens = normalize_text(candidate_text)
+
+    if not reference_tokens or not candidate_tokens:
+        return 0.0
+
+    reference_joined = " ".join(reference_tokens)
+    candidate_joined = " ".join(candidate_tokens)
+
+    # Exact normalized containment: ideal evidence match.
+    if reference_joined in candidate_joined:
+        return 1.0
+
+    reference_unigrams = set(reference_tokens)
+    candidate_unigrams = set(candidate_tokens)
+
+    unigram_coverage = (
+        len(reference_unigrams & candidate_unigrams)
+        / len(reference_unigrams)
+    )
+
+    reference_bigrams = _ngrams(reference_tokens, 2)
+    candidate_bigrams = _ngrams(candidate_tokens, 2)
+
+    if reference_bigrams:
+        bigram_coverage = (
+            len(reference_bigrams & candidate_bigrams)
+            / len(reference_bigrams)
+        )
+    else:
+        bigram_coverage = unigram_coverage
+
+    return (
+        0.65 * unigram_coverage
+        + 0.35 * bigram_coverage
+    )
+
+
+def calculate_query_metrics(
+    gold_reference_texts: list[str],
+    retrieved_documents: list[dict],
+    k_values=(1, 3, 5, 10),
+    similarity_threshold: float = 0.75,
+):
+    """
+    Calculate retrieval metrics for one query using text-based relevance.
+
+    A retrieved chunk is relevant when its page_content has a text
+    similarity >= similarity_threshold against at least one gold claim.
+
+    Recall@K is claim coverage:
+        covered gold claims in top-K / total gold claims
+    """
+
+    gold_texts = [
+        text.strip()
+        for text in gold_reference_texts
+        if isinstance(text, str) and text.strip()
     ]
+
+    document_evaluations = []
+
+    for index, doc in enumerate(retrieved_documents, start=1):
+        page_content = doc.get("page_content") or ""
+
+        claim_scores = [
+            text_similarity(
+                reference_text=gold_text,
+                candidate_text=page_content,
+            )
+            for gold_text in gold_texts
+        ]
+
+        best_score = max(claim_scores, default=0.0)
+
+        document_evaluations.append(
+            {
+                "rank": doc.get("rank", index),
+                "chunk_id": doc.get("chunk_id"),
+                "text_similarity_score": best_score,
+                "is_text_relevant": (
+                    best_score >= similarity_threshold
+                ),
+                "claim_similarity_scores": claim_scores,
+            }
+        )
 
     metrics = {}
 
@@ -80,19 +196,34 @@ def calculate_query_metrics(
     # -----------------------------------------
 
     for k in k_values:
-        top_k = retrieved_ids[:k]
+        top_k_evaluations = document_evaluations[:k]
 
-        relevant_found = gold_set.intersection(
-            top_k
+        # At least one textually relevant chunk in top-K.
+        hit = int(
+            any(
+                item["is_text_relevant"]
+                for item in top_k_evaluations
+            )
         )
 
-        # Did we retrieve at least one gold chunk?
-        hit = 1 if relevant_found else 0
+        # Claim-level coverage across top-K chunks.
+        covered_claims = 0
 
-        # How much of all gold evidence was retrieved?
+        for claim_index in range(len(gold_texts)):
+            best_claim_score = max(
+                (
+                    item["claim_similarity_scores"][claim_index]
+                    for item in top_k_evaluations
+                ),
+                default=0.0,
+            )
+
+            if best_claim_score >= similarity_threshold:
+                covered_claims += 1
+
         recall = (
-            len(relevant_found) / len(gold_set)
-            if gold_set
+            covered_claims / len(gold_texts)
+            if gold_texts
             else 0.0
         )
 
@@ -105,51 +236,52 @@ def calculate_query_metrics(
 
     first_relevant_rank = None
 
-    for rank, chunk_id in enumerate(
-        retrieved_ids,
+    for index, evaluation in enumerate(
+        document_evaluations,
         start=1,
     ):
-        if chunk_id in gold_set:
-            first_relevant_rank = rank
+        if evaluation["is_text_relevant"]:
+            first_relevant_rank = index
             break
 
-    metrics["first_relevant_rank"] = (
-        first_relevant_rank
-    )
+    metrics["first_relevant_rank"] = first_relevant_rank
 
     # -----------------------------------------
     # Reciprocal Rank
     # -----------------------------------------
 
-    if first_relevant_rank is None:
-        reciprocal_rank = 0.0
-    else:
-        reciprocal_rank = (
-            1.0 / first_relevant_rank
-        )
-
     metrics["reciprocal_rank"] = (
-        reciprocal_rank
+        1.0 / first_relevant_rank
+        if first_relevant_rank is not None
+        else 0.0
+    )
+
+    metrics["document_text_evaluations"] = (
+        document_evaluations
     )
 
     return metrics
 
-
 def calculate_retrieval_baseline(
-    retrieval_results_path: str,
-    output_path: str = "baseline_retrieval_report.json",
+    retrieval_results: list[dict],
+    output_path: str | None = "baseline_retrieval_report.json",
     k_values=(1, 3, 5, 10),
+    similarity_threshold: float = 0.75,
 ):
     """
     Input:
-        retrieval_raw_results.json
+        list[dict] retrieval results
 
     Output:
         baseline_retrieval_report.json
 
+    Text relevance:
+        Retrieved page_content vs gold_claims
+        Fallback: gold_answer
+
     Metrics:
         Hit@K
-        Recall@K
+        Recall@K (gold-claim coverage)
         MRR
         First Relevant Rank
         Latency
@@ -157,9 +289,12 @@ def calculate_retrieval_baseline(
         API Error Rate
     """
 
-    results = load_json(
-        retrieval_results_path
-    )
+    if not 0.0 <= similarity_threshold <= 1.0:
+        raise ValueError(
+            "similarity_threshold must be between 0 and 1"
+        )
+
+    results = retrieval_results
 
     per_query = []
 
@@ -243,27 +378,51 @@ def calculate_retrieval_baseline(
             )
 
         # -------------------------------------
-        # Extract gold
+        # Extract gold text
         # -------------------------------------
 
+        # Prefer atomic claims for retrieval evaluation.
+        # Fall back to gold_answer if claims are unavailable.
+        gold_claims = [
+            claim
+            for claim in gold.get(
+                "gold_claims",
+                [],
+            )
+            if isinstance(claim, str)
+            and claim.strip()
+        ]
+
+        gold_answer = gold.get(
+            "gold_answer"
+        )
+
+        gold_reference_texts = (
+            gold_claims
+            if gold_claims
+            else (
+                [gold_answer]
+                if isinstance(gold_answer, str)
+                and gold_answer.strip()
+                else []
+            )
+        )
+
+        # Keep IDs only for auditing/debugging. They are NOT used
+        # to decide relevance anymore.
         gold_chunk_ids = gold.get(
             "gold_chunk_ids",
             [],
         )
 
-        # Fallback if gold_chunk_ids missing
         if not gold_chunk_ids:
             gold_chunk_ids = [
-                evidence.get(
-                    "chunk_id"
-                )
+                evidence.get("chunk_id")
                 for evidence in gold.get(
                     "gold_evidence",
                     [],
                 )
-                if evidence.get(
-                    "chunk_id"
-                )
+                if evidence.get("chunk_id")
             ]
 
         # -------------------------------------
@@ -283,9 +442,10 @@ def calculate_retrieval_baseline(
         # -------------------------------------
 
         metrics = calculate_query_metrics(
-            gold_chunk_ids=gold_chunk_ids,
+            gold_reference_texts=gold_reference_texts,
             retrieved_documents=documents,
             k_values=k_values,
+            similarity_threshold=similarity_threshold,
         )
 
         # Collect metrics
@@ -327,8 +487,16 @@ def calculate_retrieval_baseline(
                     .get("original_query")
                 ),
 
-                "gold_chunk_ids": (
+                "gold_reference_texts": (
+                    gold_reference_texts
+                ),
+
+                "gold_chunk_ids_for_audit": (
                     gold_chunk_ids
+                ),
+
+                "similarity_threshold": (
+                    similarity_threshold
                 ),
 
                 "retrieved_chunk_ids": [
@@ -484,6 +652,16 @@ def calculate_retrieval_baseline(
     # =========================================
 
     report = {
+        "evaluation": {
+            "relevance_method": "text_based_similarity",
+            "gold_text_source": "gold_claims_fallback_gold_answer",
+            "similarity_threshold": similarity_threshold,
+            "similarity_formula": (
+                "exact containment => 1.0; otherwise "
+                "0.65 * unigram_coverage + 0.35 * bigram_coverage"
+            ),
+        },
+
         "summary": {
             "total_queries": (
                 total_queries
@@ -509,18 +687,24 @@ def calculate_retrieval_baseline(
         "per_query": per_query,
     }
 
-    save_json(
-        report,
-        output_path,
-    )
+    if output_path:
+        save_json(
+            report,
+            output_path,
+        )
 
     return report
 
 
 if __name__ == '__main__' :
+    retrieval_results = load_json(
+        "evaluation/test_dataset/malaria_retrieval_raw_results.json"
+    )
+
     report = calculate_retrieval_baseline(
-        retrieval_results_path="evaluation/test_dataset/retrieval_raw_results.json",
+        retrieval_results=retrieval_results,
         output_path="baseline_retrieval_report.json",
+        similarity_threshold=0.75,
     )
 
     print(
