@@ -4,7 +4,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 from fastapi import FastAPI
-
+from src.api.routes.generation_router import generation_router
 from src.api.routes.indexing_router import indexing_router
 from src.api.routes.retrieval_router import retrieval_router
 from src.indexing.embeddings import Embedding
@@ -40,7 +40,7 @@ app = FastAPI(
 
 app.include_router(indexing_router)
 app.include_router(retrieval_router)
-# app.include_router(generation_router)
+app.include_router(generation_router)
 
 
 @app.get("/", tags=["Health"])

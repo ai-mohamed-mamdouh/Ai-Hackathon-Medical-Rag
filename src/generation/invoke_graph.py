@@ -16,7 +16,7 @@ from src.generation.orchestration.medical_rag.schemas import FinalResponse
 from src.generation.orchestration.medical_rag.state import MedicalRAGState
 
 
-async def invoke_medical_rag() -> tuple[FinalResponse, MedicalRAGState]:
+async def invoke_medical_rag(initial_state:MedicalRAGState) -> tuple[FinalResponse, MedicalRAGState]:
     """Invoke the graph and return both external and internal representations."""
     async with httpx.AsyncClient() as http_client:
         chains = create_medical_rag_chains()
@@ -28,11 +28,6 @@ async def invoke_medical_rag() -> tuple[FinalResponse, MedicalRAGState]:
             retrieval_client=retrieval_client,
         )
 
-        initial_state: MedicalRAGState = {
-            "original_query": (
-                "What are the common causes of peripheral vertigo?"
-            )
-        }
         result: MedicalRAGState = await graph.ainvoke(initial_state)
         final_response = result["final_response"]
 

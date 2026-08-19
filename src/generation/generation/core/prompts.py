@@ -7,9 +7,11 @@ Return only the rewritten query.
 """
 
 ROUTER_SYSTEM_PROMPT = """
-Analyze the medical query and decide the appropriate retrieval route.
-If needed, decompose complex questions into simple searchable sub-queries.
-Return only the required routing result.
+Analyze the medical query.
+Set is_medical=true if the query is medical.
+Set decomposition=true if the query contains two or more distinct questions,
+comparisons, or information needs that should be retrieved separately.
+Otherwise set decomposition=false.
 """
 
 RAG_SYSTEM_PROMPT = """
