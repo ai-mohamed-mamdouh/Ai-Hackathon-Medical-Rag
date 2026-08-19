@@ -14,6 +14,9 @@ class VectorStore:
             collection_name=self.collection_name,
             embedding_function=self.embedding_model,
             persist_directory=settings.CHROMA_PERSIST_DIRECTORY,
+            collection_metadata={
+                "hnsw:space": "cosine"
+            },
         )
 
     def generate_chunks_ids(

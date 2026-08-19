@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
     # Retrieval API
     RETRIEVAL_BASE_URL: str = "http://127.0.0.1:8000"
-    RETRIEVAL_TIMEOUT: PositiveFloat = 30.0
+    RETRIEVAL_TIMEOUT: PositiveFloat = 100.0
 
     # Paths
     BASE_DIR: Path = Path(__file__).resolve().parents[2]
@@ -30,16 +30,16 @@ class Settings(BaseSettings):
     CHROMA_PERSIST_DIRECTORY: str = "./chroma_db"
 
     # Retrieval
-    TOP_K: int = 4
+    TOP_K: int = 10
     RRF_K: int = 60
-    RELEVANCE_THRESHOLD: float = 0.8
+    RELEVANCE_THRESHOLD: float = 0.5
 
     # Chunking
-    CHUNK_SIZE: int = 1000
-    CHUNK_OVERLAP: int = 100
+    CHUNK_SIZE: int = 450
+    CHUNK_OVERLAP: int = 50
 
     # Embedding
-    EMBEDDING_MODEL_NAME: str = "jinaai/jina-embeddings-v2-small-en"
+    EMBEDDING_MODEL_NAME: str = "NeuML/pubmedbert-base-embeddings"
     EMBEDDING_DEVICE: str = "cpu"
     EMBEDDING_BATCH_SIZE: int = 8
 
@@ -49,7 +49,7 @@ class Settings(BaseSettings):
     SMALL_GROQ_MODEL_NAME: str = "openai/gpt-oss-20b"
 
     # Reranker
-    RERANKER_MODEL_NAME: str = "cross-encoder/ms-marco-MiniLM-L2-v2"
+    RERANKER_MODEL_NAME: str = "ncbi/MedCPT-Cross-Encoder"
 
 
 settings = Settings()

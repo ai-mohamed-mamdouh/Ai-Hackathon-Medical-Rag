@@ -204,11 +204,11 @@ def export_file_chunks_to_json(
     return output_path
 
 if __name__ == '__main__' : 
-    # file_name ="giddiness.pdf"
-    # file_id="4be15b294a3626e4bb656c797a4a1a790dd8fbd4b3ca949c141919b8f414d8bb"
+    file_name ="giddiness.pdf"
+    file_id="4be15b294a3626e4bb656c797a4a1a790dd8fbd4b3ca949c141919b8f414d8bb"
 
-    file_name="WHO guidelines for malaria.pdf"
-    file_id="7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21"
+    # file_name="WHO guidelines for malaria.pdf"
+    # file_id="7b89453882790218cd45734a781b96c80f8cb2d0900515d7097ae515b1a4ea21"
 
     embedding_model = Embedding().get_embedding_model()
 
