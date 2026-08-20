@@ -80,7 +80,7 @@ class DocumentProcessor :
 
         chunks = DocumentSplitter().split_documents_to_chunks(blocks)
 
-        chunks = self.enrich_documents(chunks) 
+        # chunks = self.enrich_documents(chunks) 
         final_chunks = self.deduplicate_documents(chunks)
         final_chunks = DocumentSplitter().add_chunk_indices_ids(final_chunks)
 
