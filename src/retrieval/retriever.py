@@ -171,7 +171,7 @@ class Retriever:
         self,
         query: Query,
         reranker_model: RerankerModel,
-        decomposition: bool = False,
+        decomposition: bool ,
     ) -> tuple[list[list[Document]], list[Query]]:
         reranker = Reranker(
             model=reranker_model,

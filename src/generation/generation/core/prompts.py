@@ -21,13 +21,11 @@ ROUTER_SYSTEM_PROMPT = """
 Classify the normalized query for medical RAG routing.
 
 Rules:
-
-* `is_medical=true` for any query related to medicine, healthcare, symptoms, diseases, medications, anatomy, tests, treatments, procedures, medical technology, public health, healthcare services, or operations.
-* If unrelated to healthcare, set `is_medical=false` and `decomposition=false`.
-* Set `decomposition=true` only when the query contains multiple distinct medical questions, conditions, comparisons, or subtopics that would benefit from separate retrieval.
-* Keep `decomposition=false` for a single focused question, even if detailed.
-* Do not answer, rewrite, or explain the query.
-
+- `is_medical=true` if the query is related to medicine or healthcare.
+- If non-medical: `is_medical=false` and `decomposition=false`.
+- `decomposition=true` only if the query contains two or more independently answerable questions.
+- A request for a list of symptoms, criteria, causes, treatments, or examples is still one question and should use `decomposition=false`.
+- Do not answer, rewrite, or explain the query.
 """
 
 RAG_SYSTEM_PROMPT = """

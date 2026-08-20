@@ -31,13 +31,13 @@ class Settings(BaseSettings):
 
     # Retrieval
     TOP_K: int = 10  # Legacy fallback only
-    VECTOR_CANDIDATE_K: int = 30
-    BM25_CANDIDATE_K: int = 30
+    VECTOR_CANDIDATE_K: int = 15
+    BM25_CANDIDATE_K: int = 15
 
     RRF_K: int = 60
 
-    RERANKER_INPUT_K: int = 30
-    RERANKER_OUTPUT_K: int = 15
+    RERANKER_INPUT_K: int = 15
+    RERANKER_OUTPUT_K: int = 7
 
     RELEVANCE_THRESHOLD: float | None = 5.0
     LEXICAL_DEDUP_THRESHOLD: float = 0.60
