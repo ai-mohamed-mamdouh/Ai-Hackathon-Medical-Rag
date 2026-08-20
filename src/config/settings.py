@@ -43,7 +43,7 @@ class Settings(BaseSettings):
     LEXICAL_DEDUP_THRESHOLD: float = 0.60
     SEMANTIC_DEDUP_THRESHOLD: float = 0.88
 
-    FINAL_TOP_K: int = 5
+    FINAL_TOP_K: int = 3
 
     BM25_MIN_SCORE: float = 0.0
     PARALLEL_RETRIEVAL: bool = False

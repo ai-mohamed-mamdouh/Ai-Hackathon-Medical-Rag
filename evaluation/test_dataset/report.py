@@ -152,6 +152,9 @@ def calculate_query_metrics(
     A retrieved chunk is relevant when its page_content has a text
     similarity >= similarity_threshold against at least one gold claim.
 
+    Precision@K is retrieved-chunk relevance:
+        relevant retrieved chunks in top-K / retrieved chunks in top-K
+
     Recall@K is claim coverage:
         covered gold claims in top-K / total gold claims
     """
@@ -192,7 +195,7 @@ def calculate_query_metrics(
     metrics = {}
 
     # -----------------------------------------
-    # Hit@K and Recall@K
+    # Hit@K, Precision@K and Recall@K
     # -----------------------------------------
 
     for k in k_values:
@@ -204,6 +207,19 @@ def calculate_query_metrics(
                 item["is_text_relevant"]
                 for item in top_k_evaluations
             )
+        )
+
+        # Relevant retrieved chunks in top-K.
+        relevant_chunks = sum(
+            1
+            for item in top_k_evaluations
+            if item["is_text_relevant"]
+        )
+
+        precision = (
+            relevant_chunks / len(top_k_evaluations)
+            if top_k_evaluations
+            else 0.0
         )
 
         # Claim-level coverage across top-K chunks.
@@ -228,6 +244,7 @@ def calculate_query_metrics(
         )
 
         metrics[f"hit@{k}"] = hit
+        metrics[f"precision@{k}"] = precision
         metrics[f"recall@{k}"] = recall
 
     # -----------------------------------------
@@ -281,6 +298,7 @@ def calculate_retrieval_baseline(
 
     Metrics:
         Hit@K
+        Precision@K (retrieved-chunk relevance)
         Recall@K (gold-claim coverage)
         MRR
         First Relevant Rank
@@ -307,6 +325,11 @@ def calculate_retrieval_baseline(
 
     # Used for global averages
     hit_values = {
+        k: []
+        for k in k_values
+    }
+
+    precision_values = {
         k: []
         for k in k_values
     }
@@ -454,6 +477,10 @@ def calculate_retrieval_baseline(
                 metrics[f"hit@{k}"]
             )
 
+            precision_values[k].append(
+                metrics[f"precision@{k}"]
+            )
+
             recall_values[k].append(
                 metrics[f"recall@{k}"]
             )
@@ -533,6 +560,21 @@ def calculate_retrieval_baseline(
 
         aggregate[
             f"hit@{k}"
+        ] = (
+            mean(values)
+            if values
+            else 0.0
+        )
+
+    # -----------------------------------------
+    # Precision@K
+    # -----------------------------------------
+
+    for k in k_values:
+        values = precision_values[k]
+
+        aggregate[
+            f"precision@{k}"
         ] = (
             mean(values)
             if values
